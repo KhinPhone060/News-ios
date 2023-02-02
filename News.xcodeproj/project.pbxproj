@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F73A5419298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */; };
 		F74D40DE298B567700ECBF41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D40DD298B567700ECBF41 /* AppDelegate.swift */; };
 		F74D40E0298B567700ECBF41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D40DF298B567700ECBF41 /* SceneDelegate.swift */; };
 		F74D40E2298B567700ECBF41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D40E1298B567700ECBF41 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingNewsCollectionViewCell.swift; sourceTree = "<group>"; };
 		F74D40DA298B567700ECBF41 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74D40DD298B567700ECBF41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F74D40DF298B567700ECBF41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				F74D40E6298B567800ECBF41 /* Assets.xcassets */,
 				F74D40E8298B567800ECBF41 /* LaunchScreen.storyboard */,
 				F74D40EB298B567800ECBF41 /* Info.plist */,
+				F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				F74D40E2298B567700ECBF41 /* ViewController.swift in Sources */,
 				F74D40DE298B567700ECBF41 /* AppDelegate.swift in Sources */,
+				F73A5419298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift in Sources */,
 				F74D40E0298B567700ECBF41 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

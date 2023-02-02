@@ -3,11 +3,12 @@
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BreakingNewsCollectionViewCell" customModule="News" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BreakingNewsCollectionViewCell" id="WKg-XD-SJB" customClass="BreakingNewsCollectionViewCell" customModule="News" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="200" height="207"/>
@@ -16,34 +17,55 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="207"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breakingNews" translatesAutoresizingMaskIntoConstraints="NO" id="1yq-tc-Hnh">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking News Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F4b-WY-8i9">
-                        <rect key="frame" x="0.0" y="157" width="200" height="50"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eyF-TS-cKD">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="207"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="QES-Le-DXy">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="0eZ-gg-PJv"/>
+                                    <constraint firstAttribute="width" constant="200" id="X3R-Jn-KcA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking News Title Breaking News Title Breaking News Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTq-C6-oeg">
+                                <rect key="frame" x="0.0" y="125" width="200" height="82"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="50" id="GoX-Tf-6O6"/>
+                            <constraint firstItem="QES-Le-DXy" firstAttribute="leading" secondItem="eyF-TS-cKD" secondAttribute="leading" id="4sL-bS-kkO"/>
+                            <constraint firstAttribute="trailing" secondItem="QES-Le-DXy" secondAttribute="trailing" id="7P2-bs-Bu4"/>
+                            <constraint firstItem="QES-Le-DXy" firstAttribute="top" secondItem="eyF-TS-cKD" secondAttribute="top" id="ipU-iX-182"/>
+                            <constraint firstAttribute="bottom" secondItem="hTq-C6-oeg" secondAttribute="bottom" id="lSC-zu-S0v"/>
+                            <constraint firstItem="hTq-C6-oeg" firstAttribute="top" secondItem="QES-Le-DXy" secondAttribute="bottom" constant="5" id="rcd-Xt-jNd"/>
+                            <constraint firstItem="hTq-C6-oeg" firstAttribute="leading" secondItem="eyF-TS-cKD" secondAttribute="leading" id="siA-dJ-Me0"/>
+                            <constraint firstAttribute="trailing" secondItem="hTq-C6-oeg" secondAttribute="trailing" id="v2S-ga-SWu"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="1yq-tc-Hnh" firstAttribute="top" secondItem="RjD-PW-juY" secondAttribute="top" id="BnI-xK-zlP"/>
-                    <constraint firstAttribute="trailing" secondItem="1yq-tc-Hnh" secondAttribute="trailing" id="Lqw-xK-eES"/>
-                    <constraint firstAttribute="bottom" secondItem="F4b-WY-8i9" secondAttribute="bottom" id="M1N-nS-UYk"/>
-                    <constraint firstItem="F4b-WY-8i9" firstAttribute="leading" secondItem="RjD-PW-juY" secondAttribute="leading" id="nw0-YG-x0w"/>
-                    <constraint firstItem="F4b-WY-8i9" firstAttribute="top" secondItem="1yq-tc-Hnh" secondAttribute="bottom" constant="7" id="o0i-Ta-M2W"/>
-                    <constraint firstAttribute="trailing" secondItem="F4b-WY-8i9" secondAttribute="trailing" id="puA-G9-C93"/>
-                    <constraint firstItem="1yq-tc-Hnh" firstAttribute="leading" secondItem="RjD-PW-juY" secondAttribute="leading" id="s8D-6W-oGD"/>
+                    <constraint firstAttribute="trailing" secondItem="eyF-TS-cKD" secondAttribute="trailing" id="fIS-qW-VFR"/>
+                    <constraint firstAttribute="bottom" secondItem="eyF-TS-cKD" secondAttribute="bottom" id="hab-L6-2Ed"/>
+                    <constraint firstItem="eyF-TS-cKD" firstAttribute="top" secondItem="RjD-PW-juY" secondAttribute="top" id="hzf-eL-6t2"/>
+                    <constraint firstItem="eyF-TS-cKD" firstAttribute="leading" secondItem="RjD-PW-juY" secondAttribute="leading" id="pwv-fw-evK"/>
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="196" height="50"/>
+            <connections>
+                <outlet property="breakingNewsImage" destination="QES-Le-DXy" id="upx-YP-ddl"/>
+                <outlet property="breakingNewsTitle" destination="hTq-C6-oeg" id="v3L-QS-crn"/>
+                <outlet property="containerView" destination="eyF-TS-cKD" id="4Hq-Ec-LXI"/>
+            </connections>
             <point key="canvasLocation" x="160" y="-3.9099526066350707"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="breakingNews" width="144.33332824707031" height="93.333335876464844"/>
+        <image name="random" width="262.33334350585938" height="148"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

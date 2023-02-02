@@ -9,9 +9,15 @@ import UIKit
 
 class BreakingNewsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var breakingNewsTitle: UILabel!
+    @IBOutlet weak var breakingNewsImage: UIImageView!
     
-    override class func awakeFromNib() {
+    @IBOutlet weak var containerView: UIView!
+    
+    override func awakeFromNib() {
         super.awakeFromNib()
         
+        containerView.layer.masksToBounds = true
+        breakingNewsImage.layer.cornerRadius = 10
     }
 }

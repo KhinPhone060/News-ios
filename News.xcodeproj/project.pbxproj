@@ -17,6 +17,7 @@
 		F74D40EA298B567800ECBF41 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F74D40E8298B567800ECBF41 /* LaunchScreen.storyboard */; };
 		F75E4A8E298BD9D0000DC7E6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E4A8D298BD9D0000DC7E6 /* News.swift */; };
 		F75E4A90298BDAA0000DC7E6 /* NewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E4A8F298BDAA0000DC7E6 /* NewsService.swift */; };
+		F75E4A92298BE8B0000DC7E6 /* SMTabbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F75E4A91298BE8B0000DC7E6 /* SMTabbar.swift */; };
 		FD1561C7DD9376D25F10B568 /* Pods_News.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22D07B9A7E8807ACD3DEF968 /* Pods_News.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		F74D40EB298B567800ECBF41 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F75E4A8D298BD9D0000DC7E6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		F75E4A8F298BDAA0000DC7E6 /* NewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsService.swift; sourceTree = "<group>"; };
+		F75E4A91298BE8B0000DC7E6 /* SMTabbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMTabbar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 		F733F484298BD5BF00F18B69 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F75E4A91298BE8B0000DC7E6 /* SMTabbar.swift */,
 				F74D40E3298B567700ECBF41 /* Main.storyboard */,
 				F73A541A298B759F00872AF1 /* BreakingNewsCollectionViewCell.xib */,
 				F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */,
@@ -257,6 +260,7 @@
 				F73A5419298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift in Sources */,
 				F75E4A8E298BD9D0000DC7E6 /* News.swift in Sources */,
 				F74D40E0298B567700ECBF41 /* SceneDelegate.swift in Sources */,
+				F75E4A92298BE8B0000DC7E6 /* SMTabbar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

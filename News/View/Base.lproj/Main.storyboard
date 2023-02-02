@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fYN-g7-XjI">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -14,14 +15,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2L-VO-ZlG">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
+                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vs-iE-Blf" userLabel="content">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="714"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMb-yo-Qep">
                                                 <rect key="frame" x="27" y="21" width="154" height="26.333333333333329"/>
@@ -30,7 +31,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rPL-hT-7tm">
-                                                <rect key="frame" x="27" y="67.333333333333329" width="545" height="159.66666666666669"/>
+                                                <rect key="frame" x="27" y="67.333333333333329" width="335" height="206.33333333333337"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QMn-y3-Za0">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -40,7 +41,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="5K2-3O-h5s" customClass="BreakingNewsCollectionViewCell" customModule="News" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="-23.666666666666668" width="200" height="207"/>
+                                                        <rect key="frame" x="0.0" y="-0.33333333333333331" width="200" height="207"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CYi-h6-ePm">
                                                             <rect key="frame" x="0.0" y="0.0" width="200" height="207"/>
@@ -78,20 +79,37 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpn-sa-F8u">
-                                                <rect key="frame" x="531" y="23" width="42" height="24.333333333333329"/>
+                                                <rect key="frame" x="321" y="23" width="42" height="24.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIN-ej-mbN" customClass="SMTabbar" customModule="News" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="283.66666666666669" width="390" height="80"/>
+                                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="80" id="cgS-ES-7Ma"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OWi-Bs-QMC">
+                                                <rect key="frame" x="82" y="503" width="227" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="GIN-ej-mbN" secondAttribute="bottom" constant="350.33333333333337" id="0BQ-Ck-bkP"/>
                                             <constraint firstItem="rPL-hT-7tm" firstAttribute="top" secondItem="XMb-yo-Qep" secondAttribute="bottom" constant="20" id="7Fg-iV-w4U"/>
+                                            <constraint firstAttribute="trailing" secondItem="GIN-ej-mbN" secondAttribute="trailing" id="AJA-0w-55n"/>
                                             <constraint firstItem="XMb-yo-Qep" firstAttribute="leading" secondItem="2vs-iE-Blf" secondAttribute="leading" constant="27" id="FED-JX-caA"/>
+                                            <constraint firstItem="GIN-ej-mbN" firstAttribute="top" secondItem="rPL-hT-7tm" secondAttribute="bottom" constant="10" id="GRZ-Gz-wnl"/>
+                                            <constraint firstItem="GIN-ej-mbN" firstAttribute="leading" secondItem="2vs-iE-Blf" secondAttribute="leading" id="LpT-fX-WFL"/>
                                             <constraint firstItem="XMb-yo-Qep" firstAttribute="top" secondItem="2vs-iE-Blf" secondAttribute="top" constant="21" id="Qv2-Xm-PT6"/>
                                             <constraint firstAttribute="trailing" secondItem="rPL-hT-7tm" secondAttribute="trailing" constant="28" id="U0t-oD-7fy"/>
                                             <constraint firstItem="Vpn-sa-F8u" firstAttribute="top" secondItem="2vs-iE-Blf" secondAttribute="top" constant="23" id="Vin-FJ-ghO"/>
-                                            <constraint firstAttribute="bottom" secondItem="rPL-hT-7tm" secondAttribute="bottom" constant="439" id="adb-kc-q55"/>
                                             <constraint firstItem="rPL-hT-7tm" firstAttribute="top" secondItem="Vpn-sa-F8u" secondAttribute="bottom" constant="20" id="b8n-zJ-ik2"/>
                                             <constraint firstAttribute="trailing" secondItem="Vpn-sa-F8u" secondAttribute="trailing" constant="27" id="mOa-cw-HXa"/>
                                             <constraint firstItem="rPL-hT-7tm" firstAttribute="leading" secondItem="2vs-iE-Blf" secondAttribute="leading" constant="27" id="pZP-Fr-gEO"/>
@@ -123,18 +141,20 @@
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="nkA-0E-xQE"/>
                     <connections>
                         <outlet property="breakingNewsCollectionView" destination="rPL-hT-7tm" id="tu3-tD-Lpf"/>
+                        <outlet property="headingText" destination="OWi-Bs-QMC" id="B2e-MP-GfB"/>
+                        <outlet property="tabBarView" destination="GIN-ej-mbN" id="YDZ-8y-zl4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.076923076923077" y="3.5545023696682461"/>
+            <point key="canvasLocation" x="-24.615384615384613" y="2.8436018957345972"/>
         </scene>
         <!--Search-->
         <scene sceneID="gHH-r5-Cde">
             <objects>
                 <viewController id="ng6-Xl-KFH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="epa-H5-NvQ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6qg-xH-e5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -150,7 +170,7 @@
             <objects>
                 <viewController id="mQA-r4-euI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SAS-vb-KNM">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="YDy-gJ-JmH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -170,7 +190,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <color key="tintColor" name="AccentColor"/>
-                        <color key="selectedImageTintColor" red="0.086540883580000005" green="0.16488902459999999" blue="0.62202099119999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="dBI-0E-7sg"/>

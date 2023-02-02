@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    @IBOutlet weak var headingText: UILabel!
+    @IBOutlet weak var tabBarView: SMTabbar!
     @IBOutlet weak var breakingNewsCollectionView: UICollectionView!
     var newsList = [News]()
 
@@ -23,6 +25,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         //register cell
         let cellNib = UINib(nibName: "BreakingNewsCollectionViewCell", bundle: nil)
         breakingNewsCollectionView.register(cellNib, forCellWithReuseIdentifier: "BreakingNewsCollectionViewCell")
+        
+        //tabbar view
+        self.automaticallyAdjustsScrollViewInsets = false
+        let categoryList: [String] = ["Business","Entertainment","Science","Health","Sports","Technology"]
+        self.tabBarView.buttonWidth = 110
+        self.tabBarView.moveDuration = 0.4
+        self.tabBarView.fontSize = 16.0
+        self.tabBarView.lineHeight = 3
+        self.tabBarView.lineWidth = 50
+        self.tabBarView.linePosition = .bottom
+        self.tabBarView.configureSMTabbar(titleList: categoryList) { index -> (Void) in
+            self.headingText.text = categoryList[index]
+            print(index)
+        }
         
     }
 

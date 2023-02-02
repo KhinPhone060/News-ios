@@ -46,35 +46,12 @@
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CYi-h6-ePm">
                                                             <rect key="frame" x="0.0" y="0.0" width="200" height="207"/>
                                                             <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="breakingNews" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-2Q-bT9">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking news title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-w9-VqT">
-                                                                    <rect key="frame" x="0.0" y="157" width="200" height="50"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="hak-5U-IU3"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="KTM-w9-VqT" secondAttribute="trailing" id="3Xg-AY-9xt"/>
-                                                                <constraint firstItem="dsd-2Q-bT9" firstAttribute="leading" secondItem="CYi-h6-ePm" secondAttribute="leading" id="3qC-X3-ola"/>
-                                                                <constraint firstItem="KTM-w9-VqT" firstAttribute="top" secondItem="dsd-2Q-bT9" secondAttribute="bottom" constant="7.0000000000000853" id="EcI-tT-bzn"/>
-                                                                <constraint firstAttribute="bottom" secondItem="KTM-w9-VqT" secondAttribute="bottom" constant="-8.5265128291212022e-14" id="Eyc-0h-nzk"/>
-                                                                <constraint firstItem="KTM-w9-VqT" firstAttribute="leading" secondItem="CYi-h6-ePm" secondAttribute="leading" id="VMK-Ph-bGO"/>
-                                                                <constraint firstItem="dsd-2Q-bT9" firstAttribute="top" secondItem="CYi-h6-ePm" secondAttribute="top" id="iyx-tn-fM7"/>
-                                                                <constraint firstAttribute="trailing" secondItem="dsd-2Q-bT9" secondAttribute="trailing" id="vN4-Ta-nAY"/>
-                                                            </constraints>
                                                         </collectionViewCellContentView>
                                                         <size key="customSize" width="200" height="207"/>
                                                     </collectionViewCell>
                                                 </cells>
                                                 <connections>
-                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="5DR-26-tXI"/>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="B5j-Ne-uvk"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xsu-Sw-1sL"/>
                                                 </connections>
                                             </collectionView>
@@ -122,6 +99,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="nkA-0E-xQE"/>
+                    <connections>
+                        <outlet property="BreakingNewsCollectionView" destination="rPL-hT-7tm" id="tu3-tD-Lpf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -182,7 +162,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="breakingNews" width="144.33332824707031" height="93.333335876464844"/>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>

@@ -9,4 +9,9 @@ import UIKit
 
 class BreakingNewsCollectionViewCell: UICollectionViewCell {
     
+    
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
 }

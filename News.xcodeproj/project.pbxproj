@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F73A5419298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */; };
+		F73A541B298B75A000872AF1 /* BreakingNewsCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73A541A298B759F00872AF1 /* BreakingNewsCollectionViewCell.xib */; };
 		F74D40DE298B567700ECBF41 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D40DD298B567700ECBF41 /* AppDelegate.swift */; };
 		F74D40E0298B567700ECBF41 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D40DF298B567700ECBF41 /* SceneDelegate.swift */; };
 		F74D40E2298B567700ECBF41 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D40E1298B567700ECBF41 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingNewsCollectionViewCell.swift; sourceTree = "<group>"; };
+		F73A541A298B759F00872AF1 /* BreakingNewsCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreakingNewsCollectionViewCell.xib; sourceTree = "<group>"; };
 		F74D40DA298B567700ECBF41 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F74D40DD298B567700ECBF41 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F74D40DF298B567700ECBF41 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -61,11 +63,12 @@
 				F74D40DD298B567700ECBF41 /* AppDelegate.swift */,
 				F74D40DF298B567700ECBF41 /* SceneDelegate.swift */,
 				F74D40E1298B567700ECBF41 /* ViewController.swift */,
+				F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */,
+				F73A541A298B759F00872AF1 /* BreakingNewsCollectionViewCell.xib */,
 				F74D40E3298B567700ECBF41 /* Main.storyboard */,
 				F74D40E6298B567800ECBF41 /* Assets.xcassets */,
 				F74D40E8298B567800ECBF41 /* LaunchScreen.storyboard */,
 				F74D40EB298B567800ECBF41 /* Info.plist */,
-				F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -130,6 +133,7 @@
 			files = (
 				F74D40EA298B567800ECBF41 /* LaunchScreen.storyboard in Resources */,
 				F74D40E7298B567800ECBF41 /* Assets.xcassets in Resources */,
+				F73A541B298B75A000872AF1 /* BreakingNewsCollectionViewCell.xib in Resources */,
 				F74D40E5298B567700ECBF41 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

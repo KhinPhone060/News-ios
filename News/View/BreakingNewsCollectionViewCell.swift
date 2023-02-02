@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import Kingfisher
 
-class BreakingNewsCollectionViewCell: UICollectionViewCell {
+final class BreakingNewsCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var breakingNewsTitle: UILabel!
     @IBOutlet weak var breakingNewsImage: UIImageView!
@@ -19,5 +20,11 @@ class BreakingNewsCollectionViewCell: UICollectionViewCell {
         
         containerView.layer.masksToBounds = true
         breakingNewsImage.layer.cornerRadius = 10
+    }
+    
+    func configCell(news: News) {
+        let url = URL(string: news.imageURL ?? "")
+        breakingNewsImage.kf.setImage(with: url)
+        breakingNewsTitle.text = news.title
     }
 }

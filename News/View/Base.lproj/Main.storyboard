@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fYN-g7-XjI">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -15,23 +14,23 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="e2L-VO-ZlG">
-                                <rect key="frame" x="0.0" y="47" width="390" height="714"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vs-iE-Blf" userLabel="content">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="714"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="666"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking News" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMb-yo-Qep">
-                                                <rect key="frame" x="27" y="20.999999999999996" width="154" height="33.666666666666657"/>
+                                                <rect key="frame" x="27" y="21" width="154" height="26.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rPL-hT-7tm">
-                                                <rect key="frame" x="27" y="64.666666666666671" width="335" height="210.33333333333331"/>
+                                                <rect key="frame" x="27" y="67.333333333333329" width="545" height="159.66666666666669"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QMn-y3-Za0">
                                                     <size key="itemSize" width="128" height="128"/>
@@ -41,7 +40,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="5K2-3O-h5s" customClass="BreakingNewsCollectionViewCell" customModule="News" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="1.6666666666666667" width="200" height="207"/>
+                                                        <rect key="frame" x="0.0" y="-23.666666666666668" width="200" height="207"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CYi-h6-ePm">
                                                             <rect key="frame" x="0.0" y="0.0" width="200" height="207"/>
@@ -79,7 +78,7 @@
                                                 </connections>
                                             </collectionView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpn-sa-F8u">
-                                                <rect key="frame" x="321" y="23" width="42" height="21.666666666666671"/>
+                                                <rect key="frame" x="531" y="23" width="42" height="24.333333333333329"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -87,7 +86,7 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="rPL-hT-7tm" firstAttribute="top" secondItem="XMb-yo-Qep" secondAttribute="bottom" constant="10" id="7Fg-iV-w4U"/>
+                                            <constraint firstItem="rPL-hT-7tm" firstAttribute="top" secondItem="XMb-yo-Qep" secondAttribute="bottom" constant="20" id="7Fg-iV-w4U"/>
                                             <constraint firstItem="XMb-yo-Qep" firstAttribute="leading" secondItem="2vs-iE-Blf" secondAttribute="leading" constant="27" id="FED-JX-caA"/>
                                             <constraint firstItem="XMb-yo-Qep" firstAttribute="top" secondItem="2vs-iE-Blf" secondAttribute="top" constant="21" id="Qv2-Xm-PT6"/>
                                             <constraint firstAttribute="trailing" secondItem="rPL-hT-7tm" secondAttribute="trailing" constant="28" id="U0t-oD-7fy"/>
@@ -123,7 +122,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="nkA-0E-xQE"/>
                     <connections>
-                        <outlet property="BreakingNewsCollectionView" destination="rPL-hT-7tm" id="tu3-tD-Lpf"/>
+                        <outlet property="breakingNewsCollectionView" destination="rPL-hT-7tm" id="tu3-tD-Lpf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -135,7 +134,7 @@
             <objects>
                 <viewController id="ng6-Xl-KFH" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="epa-H5-NvQ">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6qg-xH-e5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -151,7 +150,7 @@
             <objects>
                 <viewController id="mQA-r4-euI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SAS-vb-KNM">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="YDy-gJ-JmH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

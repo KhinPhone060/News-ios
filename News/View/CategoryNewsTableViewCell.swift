@@ -8,7 +8,11 @@
 import UIKit
 
 class CategoryNewsTableViewCell: UITableViewCell {
-
+    
+    @IBOutlet weak var categoryNewsImage: UIImageView!
+    @IBOutlet weak var categoryNewsTitle: UILabel!
+    @IBOutlet weak var categoryNewsDescription: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +22,13 @@ class CategoryNewsTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func configCategoryNewsCell(categoryNews: CategoryNews) {
+        let url = URL(string: categoryNews.imageURL ?? "")
+        categoryNewsImage.kf.setImage(with: url)
+        categoryNewsTitle.text = categoryNews.title
+        categoryNewsDescription.text = categoryNews.description
     }
     
 }

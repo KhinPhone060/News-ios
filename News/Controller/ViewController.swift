@@ -13,6 +13,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     @IBOutlet weak var breakingNewsCollectionView: UICollectionView!
     @IBOutlet weak var categoryNewsTableView: UITableView!
     var newsList = [News]()
+    var categoryNewsList = [CategoryNews]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +22,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         navigationController?.navigationBar.prefersLargeTitles = true
         
         getLatestNews()
+        getCategorizedNews(category: "Business")
         
         //register collection view cell
         let cellNib = UINib(nibName: "BreakingNewsCollectionViewCell", bundle: nil)
@@ -38,8 +40,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.tabBarView.configureSMTabbar(titleList: categoryList) { index -> (Void) in
             
             //chage the content inside pager
-            //self.headingText.text = categoryList[index]
-            print(index)
+            self.getCategorizedNews(category: categoryList[index])
         }
         
         //register table view cell
@@ -59,11 +60,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return categoryNewsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryNewsTableViewCell", for: indexPath) as! CategoryNewsTableViewCell
+        cell.configCategoryNewsCell(categoryNews: self.categoryNewsList[indexPath.row])
         return cell
     }
     
@@ -74,6 +76,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
                 self?.newsList = newsList
                 self?.breakingNewsCollectionView.reloadData()
             })
+    }
+    
+    func getCategorizedNews(category:String) {
+        let categoryNewsService = CategoryNewsService()
+        categoryNewsService.fetchCategoryNews(completionHandler: {[weak self] categoryNewsList in
+            self?.categoryNewsList = categoryNewsList
+            self?.categoryNewsTableView.reloadData()
+        },category: category)
     }
     
 }

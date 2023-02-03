@@ -63,6 +63,11 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="categoryNewsDescription" destination="SCK-a7-agn" id="Pdr-Ti-I4a"/>
+                <outlet property="categoryNewsImage" destination="Ijc-fY-WrW" id="3mb-Ck-cKY"/>
+                <outlet property="categoryNewsTitle" destination="eTe-2L-9CJ" id="XCW-io-XTI"/>
+            </connections>
             <point key="canvasLocation" x="-23.076923076923077" y="20.616113744075829"/>
         </tableViewCell>
     </objects>

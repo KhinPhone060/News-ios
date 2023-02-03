@@ -7,11 +7,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var headingText: UILabel!
     @IBOutlet weak var tabBarView: SMTabbar!
     @IBOutlet weak var breakingNewsCollectionView: UICollectionView!
+    @IBOutlet weak var categoryNewsTableView: UITableView!
     var newsList = [News]()
 
     override func viewDidLoad() {
@@ -22,7 +22,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         getLatestNews()
         
-        //register cell
+        //register collection view cell
         let cellNib = UINib(nibName: "BreakingNewsCollectionViewCell", bundle: nil)
         breakingNewsCollectionView.register(cellNib, forCellWithReuseIdentifier: "BreakingNewsCollectionViewCell")
         
@@ -36,9 +36,15 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.tabBarView.lineWidth = 50
         self.tabBarView.linePosition = .bottom
         self.tabBarView.configureSMTabbar(titleList: categoryList) { index -> (Void) in
-            self.headingText.text = categoryList[index]
+            
+            //chage the content inside pager
+            //self.headingText.text = categoryList[index]
             print(index)
         }
+        
+        //register table view cell
+        let tbcellNib = UINib(nibName: "CategoryNewsTableViewCell", bundle: nil)
+        categoryNewsTableView.register(tbcellNib, forCellReuseIdentifier: "CategoryNewsTableViewCell")
         
     }
 
@@ -51,6 +57,16 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.configCell(news: self.newsList[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryNewsTableViewCell", for: indexPath) as! CategoryNewsTableViewCell
+        return cell
+    }
+    
     
     func getLatestNews() {
             let newsService = NewsService()

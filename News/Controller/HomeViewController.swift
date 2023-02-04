@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tabBarView: SMTabbar!
     @IBOutlet weak var breakingNewsCollectionView: UICollectionView!
@@ -17,9 +17,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        title = "Home"
-        navigationController?.navigationBar.prefersLargeTitles = true
         
         getLatestNews()
         getCategorizedNews(category: "Business")

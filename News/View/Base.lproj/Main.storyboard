@@ -13,7 +13,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,18 +159,60 @@
         <!--Search-->
         <scene sceneID="gHH-r5-Cde">
             <objects>
-                <viewController id="ng6-Xl-KFH" sceneMemberID="viewController">
+                <viewController id="ng6-Xl-KFH" customClass="SearchViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="epa-H5-NvQ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-Lg-wSn">
+                                <rect key="frame" x="31" y="105" width="123" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="Us5-zc-bqM">
+                                <rect key="frame" x="20" y="162" width="350" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="ng6-Xl-KFH" id="lj2-S7-rtl"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ou8-IO-01Z">
+                                <rect key="frame" x="0.0" y="249" width="390" height="512"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ng6-Xl-KFH" id="a5C-Rd-84q"/>
+                                    <outlet property="delegate" destination="ng6-Xl-KFH" id="AdO-pV-fF6"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6qg-xH-e5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Us5-zc-bqM" firstAttribute="top" secondItem="0cg-Lg-wSn" secondAttribute="bottom" constant="21" id="3nq-ZW-Jat"/>
+                            <constraint firstItem="Ou8-IO-01Z" firstAttribute="top" secondItem="Us5-zc-bqM" secondAttribute="bottom" constant="31" id="6ec-gN-0eg"/>
+                            <constraint firstItem="6qg-xH-e5M" firstAttribute="bottom" secondItem="Ou8-IO-01Z" secondAttribute="bottom" id="BPZ-nW-oYK"/>
+                            <constraint firstItem="Us5-zc-bqM" firstAttribute="leading" secondItem="6qg-xH-e5M" secondAttribute="leading" constant="20" id="Hp3-uX-l0I"/>
+                            <constraint firstItem="6qg-xH-e5M" firstAttribute="trailing" secondItem="Us5-zc-bqM" secondAttribute="trailing" constant="20" id="aHO-wy-nPi"/>
+                            <constraint firstItem="0cg-Lg-wSn" firstAttribute="top" secondItem="6qg-xH-e5M" secondAttribute="top" constant="58" id="bB1-3F-7Bx"/>
+                            <constraint firstItem="0cg-Lg-wSn" firstAttribute="leading" secondItem="6qg-xH-e5M" secondAttribute="leading" constant="31" id="cTW-eY-Gdq"/>
+                            <constraint firstItem="Ou8-IO-01Z" firstAttribute="leading" secondItem="6qg-xH-e5M" secondAttribute="leading" id="gLB-Ot-enn"/>
+                            <constraint firstItem="6qg-xH-e5M" firstAttribute="trailing" secondItem="0cg-Lg-wSn" secondAttribute="trailing" constant="236" id="l9V-Sd-gi9"/>
+                            <constraint firstItem="6qg-xH-e5M" firstAttribute="trailing" secondItem="Ou8-IO-01Z" secondAttribute="trailing" id="zLC-Bc-5R7"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" id="GnD-Uo-cb0"/>
+                    <connections>
+                        <outlet property="searchTableView" destination="Ou8-IO-01Z" id="u7b-FK-lrl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qZd-vs-6im" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="4"/>
+            <point key="canvasLocation" x="876.92307692307691" y="3.5545023696682461"/>
         </scene>
         <!--Profile-->
         <scene sceneID="aEw-hL-ZMf">

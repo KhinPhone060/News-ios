@@ -9,6 +9,18 @@ import UIKit
 
 class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let targetVC = segue.destination as? NewsDetailViewController,
+           let news = sender as? News {
+            targetVC.news = news
+        }
+        
+        if let categoryNewsDetailVC = segue.destination as? CategoryNewsDetailViewController,
+           let categoryNews = sender as? CategoryNews {
+            categoryNewsDetailVC.categoryNews = categoryNews
+        }
+    }
+    
     @IBOutlet weak var tabBarView: SMTabbar!
     @IBOutlet weak var breakingNewsCollectionView: UICollectionView!
     @IBOutlet weak var categoryNewsTableView: UITableView!
@@ -64,6 +76,24 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryNewsTableViewCell", for: indexPath) as! CategoryNewsTableViewCell
         cell.configCategoryNewsCell(categoryNews: self.categoryNewsList[indexPath.row])
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if newsList.count > 0 {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "showNewsDetail") as? NewsDetailViewController {
+                vc.news = newsList[indexPath.row]
+                tabBarController?.showDetailViewController(vc, sender: self)
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if newsList.count > 0 {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "showCategoryNewsDetail") as? CategoryNewsDetailViewController {
+                vc.categoryNews = categoryNewsList[indexPath.row]
+                tabBarController?.showDetailViewController(vc, sender: self)
+            }
+        }
     }
     
     

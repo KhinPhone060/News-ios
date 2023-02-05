@@ -13,6 +13,7 @@ struct News: Mappable {
     var title: String?
     var imageURL: String?
     var url: String?
+    var description: String?
     
     init?(map: ObjectMapper.Map) {
         
@@ -22,5 +23,6 @@ struct News: Mappable {
         title <- map["title"]
         imageURL <- map["urlToImage"]
         url <- map["url"]
+        description <- map["description"]
     }
 }

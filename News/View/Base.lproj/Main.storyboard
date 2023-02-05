@@ -252,10 +252,10 @@
             </objects>
             <point key="canvasLocation" x="1815" y="4"/>
         </scene>
-        <!--News Detail View Controller-->
+        <!--Breaking News Detail View Controller-->
         <scene sceneID="9eW-hP-kSb">
             <objects>
-                <viewController storyboardIdentifier="showNewsDetail" id="QMT-ly-luI" customClass="NewsDetailViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showNewsDetail" id="QMT-ly-luI" customClass="BreakingNewsDetailViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q5y-R3-vu9">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

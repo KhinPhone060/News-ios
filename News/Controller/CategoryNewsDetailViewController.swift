@@ -10,17 +10,18 @@ import ReadabilityKit
 
 class CategoryNewsDetailViewController: UIViewController {
     
-    var categoryNews: CategoryNews?
-    
     @IBOutlet weak var categoryNewsImage: UIImageView!
     @IBOutlet weak var categoryNewsTitle: UILabel!
     @IBOutlet weak var datePublishedLable: UILabel!
     @IBOutlet weak var contentLable: UILabel!
     
+    var categoryNews: CategoryNews?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         parseContent()
+        
         let url = URL(string: categoryNews?.imageURL ?? "")
         categoryNewsImage.kf.setImage(with: url)
         categoryNewsTitle.text = categoryNews?.title

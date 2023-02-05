@@ -21,6 +21,7 @@ class EverythingNewsDetailViewController: UIViewController {
         super.viewDidLoad()
 
         parseContent()
+        
         let url = URL(string: everythingNews?.imageURL ?? "")
         everythingNewsImage.kf.setImage(with: url)
         everythingNewsTitle.text = everythingNews?.title

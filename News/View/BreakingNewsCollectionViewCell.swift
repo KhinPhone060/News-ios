@@ -22,7 +22,7 @@ final class BreakingNewsCollectionViewCell: UICollectionViewCell {
         breakingNewsImage.layer.cornerRadius = 10
     }
     
-    func configCell(news: News) {
+    func configCell(news: BreakingNews) {
         let url = URL(string: news.imageURL ?? "")
         breakingNewsImage.kf.setImage(with: url)
         breakingNewsTitle.text = news.title

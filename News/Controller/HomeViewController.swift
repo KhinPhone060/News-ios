@@ -7,11 +7,18 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+class HomeViewController: UIViewController {
+    
+    @IBOutlet weak var tabBarView: SMTabbar!
+    @IBOutlet weak var breakingNewsCollectionView: UICollectionView!
+    @IBOutlet weak var categoryNewsTableView: UITableView!
+    
+    var newsList = [BreakingNews]()
+    var categoryNewsList = [CategoryNews]()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let targetVC = segue.destination as? NewsDetailViewController,
-           let news = sender as? News {
+        if let targetVC = segue.destination as? BreakingNewsDetailViewController,
+           let news = sender as? BreakingNews {
             targetVC.news = news
         }
         
@@ -20,12 +27,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             categoryNewsDetailVC.categoryNews = categoryNews
         }
     }
-    
-    @IBOutlet weak var tabBarView: SMTabbar!
-    @IBOutlet weak var breakingNewsCollectionView: UICollectionView!
-    @IBOutlet weak var categoryNewsTableView: UITableView!
-    var newsList = [News]()
-    var categoryNewsList = [CategoryNews]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +38,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cellNib = UINib(nibName: "BreakingNewsCollectionViewCell", bundle: nil)
         breakingNewsCollectionView.register(cellNib, forCellWithReuseIdentifier: "BreakingNewsCollectionViewCell")
         
-        //tabbar view
-        self.automaticallyAdjustsScrollViewInsets = false
+        //register table view cell
+        let tbcellNib = UINib(nibName: "CategoryNewsTableViewCell", bundle: nil)
+        categoryNewsTableView.register(tbcellNib, forCellReuseIdentifier: "CategoryNewsTableViewCell")
+        
+        //tabbar view configuration
         let categoryList: [String] = ["Business","Entertainment","Science","Health","Sports","Technology"]
         self.tabBarView.buttonWidth = 110
         self.tabBarView.moveDuration = 0.4
@@ -51,13 +55,13 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             //chage the content inside pager
             self.getCategorizedNews(category: categoryList[index])
         }
-        
-        //register table view cell
-        let tbcellNib = UINib(nibName: "CategoryNewsTableViewCell", bundle: nil)
-        categoryNewsTableView.register(tbcellNib, forCellReuseIdentifier: "CategoryNewsTableViewCell")
-        
     }
+}
 
+//MARK: - UICollectionView delegate and datasource
+extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSource {
+    
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.newsList.count
     }
@@ -67,6 +71,19 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         cell.configCell(news: self.newsList[indexPath.row])
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if newsList.count > 0 {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "showNewsDetail") as? BreakingNewsDetailViewController {
+                vc.news = newsList[indexPath.row]
+                tabBarController?.showDetailViewController(vc, sender: self)
+            }
+        }
+    }
+}
+
+//MARK: - UITableView delegate and datasource
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return categoryNewsList.count
@@ -78,15 +95,6 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if newsList.count > 0 {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "showNewsDetail") as? NewsDetailViewController {
-                vc.news = newsList[indexPath.row]
-                tabBarController?.showDetailViewController(vc, sender: self)
-            }
-        }
-    }
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if newsList.count > 0 {
             if let vc = storyboard?.instantiateViewController(withIdentifier: "showCategoryNewsDetail") as? CategoryNewsDetailViewController {
@@ -95,7 +103,10 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             }
         }
     }
-    
+}
+
+//MARK: - Data manipulation
+extension HomeViewController {
     
     func getLatestNews() {
             let newsService = NewsService()
@@ -104,7 +115,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
                 self?.breakingNewsCollectionView.reloadData()
             })
     }
-    
+
     func getCategorizedNews(category:String) {
         let categoryNewsService = CategoryNewsService()
         categoryNewsService.fetchCategoryNews(completionHandler: {[weak self] categoryNewsList in
@@ -112,6 +123,5 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
             self?.categoryNewsTableView.reloadData()
         },category: category)
     }
-    
 }
 

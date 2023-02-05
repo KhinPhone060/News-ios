@@ -8,7 +8,7 @@
 import Foundation
 import ObjectMapper
 
-struct News: Mappable {
+struct BreakingNews: Mappable {
     
     var title: String?
     var imageURL: String?

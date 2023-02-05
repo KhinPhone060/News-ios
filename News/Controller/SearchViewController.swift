@@ -7,7 +7,11 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
+class SearchViewController: UIViewController {
+    
+    @IBOutlet weak var searchTableView: UITableView!
+    
+    var everythingNewsList = [EverythingNews]()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let everythingNewsDetailVC = segue.destination as? EverythingNewsDetailViewController,
@@ -16,18 +20,18 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
         }
     }
     
-    @IBOutlet weak var searchTableView: UITableView!
-    
-    var everythingNewsList = [EverythingNews]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //register cell
+        //register table view cell
         let tbcellNib = UINib(nibName: "EverythingNewsTableViewCell", bundle: nil)
         searchTableView.register(tbcellNib, forCellReuseIdentifier: "EverythingNewsTableViewCell")
     }
+}
 
+//MARK: - UITableView delegate and datasource
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return everythingNewsList.count
     }
@@ -46,11 +50,19 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
             }
         }
     }
+}
+
+//MARK: - UISearchBar delegate
+extension SearchViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         getEverythingNews(searchKeyword: searchBar.text!)
     }
+}
+
+//MARK: - Data manipulation
+extension SearchViewController {
     
     func getEverythingNews(searchKeyword: String) {
             let everythingNewsService = EverythingNewsService()
@@ -59,5 +71,4 @@ class SearchViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 self?.searchTableView.reloadData()
             },keyword: searchKeyword)
     }
-    
 }

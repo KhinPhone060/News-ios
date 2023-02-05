@@ -10,7 +10,7 @@ import Alamofire
 import ObjectMapper
 
 final class NewsService {
-    func fetchNews(completionHandler: @escaping (_ newslist: [News]) -> Void) {
+    func fetchNews(completionHandler: @escaping (_ newslist: [BreakingNews]) -> Void) {
         let url = "https://newsapi.org/v2/top-headlines?language=en&apiKey=5c9bb4e194434ab281fb1b329fad774d"
         
         AF.request(url, encoding: JSONEncoding.default)
@@ -20,7 +20,7 @@ final class NewsService {
                         if let resultDict = value as? [String: Any],
                            let articleDict = resultDict["articles"] as? [[String: Any]]
                         {
-                            if let newsList = Mapper<News>().mapArray(JSONObject: articleDict) {
+                            if let newsList = Mapper<BreakingNews>().mapArray(JSONObject: articleDict) {
                                 completionHandler(newsList)
                             }
                         }

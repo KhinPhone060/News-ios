@@ -25,6 +25,7 @@ class BreakingNewsDetailViewController: UIViewController {
         let url = URL(string: news?.imageURL ?? "")
         newsImage.kf.setImage(with: url)
         newsTitle.text = news?.title
+        newsTitle.backgroundColor = UIColor.black.withAlphaComponent(0.5)
     }
     
     func parseContent() {

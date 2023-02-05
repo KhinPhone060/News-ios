@@ -25,6 +25,7 @@ class EverythingNewsDetailViewController: UIViewController {
         let url = URL(string: everythingNews?.imageURL ?? "")
         everythingNewsImage.kf.setImage(with: url)
         everythingNewsTitle.text = everythingNews?.title
+        everythingNewsTitle.backgroundColor = UIColor.black.withAlphaComponent(0.8)
     }
     
     func parseContent() {

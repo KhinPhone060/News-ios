@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fYN-g7-XjI">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -103,12 +104,6 @@
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xsu-Sw-1sL"/>
                                                 </connections>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="More" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpn-sa-F8u">
-                                                <rect key="frame" x="321" y="23" width="42" height="24.333333333333329"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GIN-ej-mbN" customClass="SMTabbar" customModule="News" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="284" width="390" height="80"/>
                                                 <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
@@ -136,12 +131,9 @@
                                             <constraint firstItem="OFk-0f-TUT" firstAttribute="top" secondItem="GIN-ej-mbN" secondAttribute="bottom" id="NJe-CH-gvS"/>
                                             <constraint firstItem="XMb-yo-Qep" firstAttribute="top" secondItem="2vs-iE-Blf" secondAttribute="top" constant="21" id="Qv2-Xm-PT6"/>
                                             <constraint firstAttribute="trailing" secondItem="rPL-hT-7tm" secondAttribute="trailing" constant="28" id="U0t-oD-7fy"/>
-                                            <constraint firstItem="Vpn-sa-F8u" firstAttribute="top" secondItem="2vs-iE-Blf" secondAttribute="top" constant="23" id="Vin-FJ-ghO"/>
-                                            <constraint firstItem="rPL-hT-7tm" firstAttribute="top" secondItem="Vpn-sa-F8u" secondAttribute="bottom" constant="20" id="b8n-zJ-ik2"/>
+                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XMb-yo-Qep" secondAttribute="trailing" constant="20" id="YzL-f4-Wta"/>
                                             <constraint firstAttribute="bottom" secondItem="OFk-0f-TUT" secondAttribute="bottom" id="lKP-WF-eof"/>
-                                            <constraint firstAttribute="trailing" secondItem="Vpn-sa-F8u" secondAttribute="trailing" constant="27" id="mOa-cw-HXa"/>
                                             <constraint firstItem="rPL-hT-7tm" firstAttribute="leading" secondItem="2vs-iE-Blf" secondAttribute="leading" constant="27" id="pZP-Fr-gEO"/>
-                                            <constraint firstItem="Vpn-sa-F8u" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XMb-yo-Qep" secondAttribute="trailing" constant="20" id="uNo-na-hdA"/>
                                             <constraint firstAttribute="trailing" secondItem="OFk-0f-TUT" secondAttribute="trailing" id="wQo-al-eE3"/>
                                         </constraints>
                                     </view>
@@ -448,8 +440,8 @@
                     <connections>
                         <outlet property="categoryNewsImage" destination="CR5-P3-OYm" id="puo-Ab-qtk"/>
                         <outlet property="categoryNewsTitle" destination="34D-NX-Ox8" id="a6d-5C-cb3"/>
-                        <outlet property="contentLable" destination="Hh7-eJ-0ia" id="hgM-ok-nnO"/>
-                        <outlet property="datePublishedLable" destination="Wwr-Bz-y14" id="w7E-Ec-0t9"/>
+                        <outlet property="contentLabel" destination="Hh7-eJ-0ia" id="hgM-ok-nnO"/>
+                        <outlet property="datePublishedLabel" destination="Wwr-Bz-y14" id="w7E-Ec-0t9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W7L-YK-fge" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

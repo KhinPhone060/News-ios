@@ -10,6 +10,7 @@ import ReadabilityKit
 
 class EverythingNewsDetailViewController: UIViewController {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var everythingNewsImage: UIImageView!
     @IBOutlet weak var everythingNewsTitle: UILabel!
     @IBOutlet weak var datePublishedLabel: UILabel!
@@ -25,7 +26,8 @@ class EverythingNewsDetailViewController: UIViewController {
         let url = URL(string: everythingNews?.imageURL ?? "")
         everythingNewsImage.kf.setImage(with: url)
         everythingNewsTitle.text = everythingNews?.title
-        everythingNewsTitle.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        everythingNewsTitle.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        containerView.layer.cornerRadius = 30
     }
     
     func parseContent() {

@@ -10,6 +10,7 @@ import ReadabilityKit
 
 class BreakingNewsDetailViewController: UIViewController {
     
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var newsImage: UIImageView!
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var datePublished: UILabel!
@@ -26,6 +27,7 @@ class BreakingNewsDetailViewController: UIViewController {
         newsImage.kf.setImage(with: url)
         newsTitle.text = news?.title
         newsTitle.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        containerView.layer.cornerRadius = 30
     }
     
     func parseContent() {

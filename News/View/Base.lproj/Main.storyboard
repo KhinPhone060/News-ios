@@ -336,6 +336,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="Amf-bV-kKI" id="FDO-0q-XN1"/>
                         <outlet property="contentLabel" destination="4Fn-Rs-598" id="XO8-YO-XZC"/>
                         <outlet property="datePublished" destination="wVM-DJ-dAk" id="HQd-0B-NTU"/>
                         <outlet property="newsImage" destination="eSO-SC-lOf" id="eIB-94-JQu"/>
@@ -440,6 +441,7 @@
                     <connections>
                         <outlet property="categoryNewsImage" destination="CR5-P3-OYm" id="puo-Ab-qtk"/>
                         <outlet property="categoryNewsTitle" destination="34D-NX-Ox8" id="a6d-5C-cb3"/>
+                        <outlet property="containerView" destination="eoX-qY-apM" id="Eyq-ra-70G"/>
                         <outlet property="contentLabel" destination="Hh7-eJ-0ia" id="hgM-ok-nnO"/>
                         <outlet property="datePublishedLabel" destination="Wwr-Bz-y14" id="w7E-Ec-0t9"/>
                     </connections>
@@ -540,6 +542,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="containerView" destination="siq-MQ-Yc1" id="jmg-ti-E0S"/>
                         <outlet property="contentLabel" destination="suS-ky-nV7" id="Og3-tJ-jRg"/>
                         <outlet property="datePublishedLabel" destination="juG-7B-vaf" id="2sB-ZQ-9MY"/>
                         <outlet property="everythingNewsImage" destination="uPP-rR-ufm" id="lGn-Fp-HUs"/>

@@ -7,6 +7,7 @@
 
 import UIKit
 import ReadabilityKit
+import FirebaseAuth
 
 class BreakingNewsDetailViewController: UIViewController {
     
@@ -37,4 +38,17 @@ class BreakingNewsDetailViewController: UIViewController {
             self.contentLabel.text = data?.text ?? "No Context"
         })
     }
+    
+    @IBAction func savePressed(_ sender: UIButton) {
+        if Auth.auth().currentUser?.uid != nil{
+            
+            //show toast or message that the news has been bookmarked
+            
+        } else {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+            (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController)
+        }
+    }
+    
 }

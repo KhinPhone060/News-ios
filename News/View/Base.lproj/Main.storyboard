@@ -541,6 +541,7 @@
                         <outlet property="datePublished" destination="wVM-DJ-dAk" id="HQd-0B-NTU"/>
                         <outlet property="newsImage" destination="eSO-SC-lOf" id="eIB-94-JQu"/>
                         <outlet property="newsTitle" destination="Mi9-8M-Rw4" id="xvz-tY-wny"/>
+                        <outlet property="saveBtn" destination="BRo-6W-aPl" id="QPt-t0-bcb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8WY-UG-Rtc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

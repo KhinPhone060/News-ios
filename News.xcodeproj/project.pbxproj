@@ -29,6 +29,7 @@
 		F764F7F82990DC2800B60C79 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F764F7F72990DC2800B60C79 /* SignUpViewController.swift */; };
 		F76BE7EB298E84BD006EE3B8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76BE7EA298E84BD006EE3B8 /* ProfileViewController.swift */; };
 		F76BE7ED298E84E1006EE3B8 /* BreakingNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76BE7EC298E84E1006EE3B8 /* BreakingNewsDetailViewController.swift */; };
+		F78495FD2992179D009C06A3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78495FC2992179D009C06A3 /* Constant.swift */; };
 		F7FFCB53298E058E00FF5FAF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFCB52298E058E00FF5FAF /* SearchViewController.swift */; };
 		F7FFCB55298E097B00FF5FAF /* EverythingNewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFCB54298E097B00FF5FAF /* EverythingNewsService.swift */; };
 		F7FFCB57298E09EE00FF5FAF /* EverythingNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFCB56298E09EE00FF5FAF /* EverythingNews.swift */; };
@@ -65,6 +66,7 @@
 		F764F7F72990DC2800B60C79 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		F76BE7EA298E84BD006EE3B8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F76BE7EC298E84E1006EE3B8 /* BreakingNewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingNewsDetailViewController.swift; sourceTree = "<group>"; };
+		F78495FC2992179D009C06A3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		F7FFCB52298E058E00FF5FAF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F7FFCB54298E097B00FF5FAF /* EverythingNewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingNewsService.swift; sourceTree = "<group>"; };
 		F7FFCB56298E09EE00FF5FAF /* EverythingNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingNews.swift; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				F74D40E8298B567800ECBF41 /* LaunchScreen.storyboard */,
 				F74D40EB298B567800ECBF41 /* Info.plist */,
 				F74C504A29914C5D0032569E /* GoogleService-Info.plist */,
+				F78495FC2992179D009C06A3 /* Constant.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				F70F5117298F7C4F00485CC6 /* CategoryNewsDetailViewController.swift in Sources */,
 				F73A5419298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift in Sources */,
 				F75E4A8E298BD9D0000DC7E6 /* BreakingNews.swift in Sources */,
+				F78495FD2992179D009C06A3 /* Constant.swift in Sources */,
 				F764F7F82990DC2800B60C79 /* SignUpViewController.swift in Sources */,
 				F74D40E0298B567700ECBF41 /* SceneDelegate.swift in Sources */,
 				F7111E07298CCB590025CDAB /* CategoryNewsService.swift in Sources */,

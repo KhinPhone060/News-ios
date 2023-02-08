@@ -14,7 +14,6 @@ class SignInViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    
     @IBAction func signInPressed(_ sender: UIButton) {
         
         if let email = emailTextField.text, let password = passwordTextField.text {

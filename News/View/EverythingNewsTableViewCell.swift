@@ -27,7 +27,7 @@ class EverythingNewsTableViewCell: UITableViewCell {
     }
     
     func configEverythingNewsCell(everythingNews: EverythingNews) {
-        let url = URL(string: everythingNews.imageURL ?? "")
+        let url = URL(string: everythingNews.imageURL ?? "https://www.shutterstock.com/image-vector/no-image-available-icon-template-260nw-1036735678.jpg")
         everytingNewsImage.kf.setImage(with: url)
         everythingNewsTitle.text = everythingNews.title
         everythingNewsDescription.text = everythingNews.description

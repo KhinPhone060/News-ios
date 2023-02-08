@@ -23,7 +23,7 @@ final class BreakingNewsCollectionViewCell: UICollectionViewCell {
     }
     
     func configCell(news: BreakingNews) {
-        let url = URL(string: news.imageURL ?? "")
+        let url = URL(string: news.imageURL ?? "https://www.shutterstock.com/image-vector/no-image-available-icon-template-260nw-1036735678.jpg")
         breakingNewsImage.kf.setImage(with: url)
         breakingNewsTitle.text = news.title
     }

@@ -40,7 +40,7 @@ class BookmarkNewsDetailViewController: UIViewController {
     func parseContent() {
         let articleUrl = URL(string: (self.bookmarkNews?.url)!)!
         Readability.parse(url: articleUrl, completion: { data in
-            self.publishedDateLabel.text = data?.datePublished ?? "No Date Published"
+            self.publishedDateLabel.text = data?.datePublished ?? "No published date"
             self.contentLabel.text = data?.text ?? "No Context"
         })
     }

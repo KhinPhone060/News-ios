@@ -8,6 +8,7 @@
 import UIKit
 import FirebaseFirestore
 import ReadabilityKit
+import FirebaseAuth
 
 class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -50,6 +51,7 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func loadBookmarkedNews() {
+        //if Auth.auth().currentUser?.email
         db.collection("bookmark")
             .order(by: Constant.FStore.dateField ,descending: true)
             .addSnapshotListener() { (querySnapshot, err) in
@@ -67,14 +69,18 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                                let url = data["url"] as? String,
                                let description = data["description"] as? String,
                                let content = data["content"] as? String,
-                               let publishedDate = data["publishedDate"] as? String
+                               let publishedDate = data["publishedDate"] as? String,
+                               let user = data["user"] as? String
                             {
-                                let newBookmark = BookmarkNews(title: title, imageURL: imageURL, url: url, description: description, content: content, publishedDate: publishedDate)
-                                self.bookmarkedNewsList.append(newBookmark)
-                                
-                                DispatchQueue.main.async {
-                                    self.bookmarkTableView.reloadData()
+                                if Auth.auth().currentUser?.email == user {
+                                    let newBookmark = BookmarkNews(title: title, imageURL: imageURL, url: url, description: description, content: content, publishedDate: publishedDate)
+                                    self.bookmarkedNewsList.append(newBookmark)
+                                    
+                                    DispatchQueue.main.async {
+                                        self.bookmarkTableView.reloadData()
+                                    }
                                 }
+                                
                             }
                         }
                     }

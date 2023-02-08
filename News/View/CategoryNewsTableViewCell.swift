@@ -26,7 +26,7 @@ class CategoryNewsTableViewCell: UITableViewCell {
     }
     
     func configCategoryNewsCell(categoryNews: CategoryNews) {
-        let url = URL(string: categoryNews.imageURL ?? "")
+        let url = URL(string: categoryNews.imageURL ?? "https://www.shutterstock.com/image-vector/no-image-available-icon-template-260nw-1036735678.jpg")
         categoryNewsImage.kf.setImage(with: url)
         categoryNewsTitle.text = categoryNews.title
         categoryNewsDescription.text = categoryNews.description

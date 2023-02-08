@@ -40,6 +40,15 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if bookmarkedNewsList.count > 0 {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: "showBookmarkNewsDetail") as? BookmarkNewsDetailViewController {
+                vc.bookmarkNews = bookmarkedNewsList[indexPath.row]
+                tabBarController?.showDetailViewController(vc, sender: self)
+            }
+        }
+    }
+    
     func loadBookmarkedNews() {
         db.collection("bookmark")
             .order(by: Constant.FStore.dateField ,descending: true)

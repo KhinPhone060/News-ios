@@ -40,7 +40,7 @@ class BreakingNewsDetailViewController: UIViewController {
     func parseContent() {
         let articleUrl = URL(string: (self.news?.url)!)!
         Readability.parse(url: articleUrl, completion: { data in
-            self.datePublished.text = data?.datePublished
+            self.datePublished.text = data?.datePublished ?? "No Date Published"
             self.contentLabel.text = data?.text ?? "No Context"
         })
     }

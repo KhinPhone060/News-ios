@@ -1,8 +1,8 @@
 //
-//  CategoryNewsDetailViewController.swift
+//  BookmarkNewsDetailViewController.swift
 //  News
 //
-//  Created by Khin Phone Ei on 05/02/2023.
+//  Created by Khin Phone Ei on 08/02/2023.
 //
 
 import UIKit
@@ -11,36 +11,36 @@ import FirebaseAuth
 import FirebaseFirestore
 import Toast
 
-class CategoryNewsDetailViewController: UIViewController {
+class BookmarkNewsDetailViewController: UIViewController {
     
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var categoryNewsImage: UIImageView!
-    @IBOutlet weak var categoryNewsTitle: UILabel!
-    @IBOutlet weak var datePublishedLabel: UILabel!
+    @IBOutlet weak var bmNewsTitle: UILabel!
+    @IBOutlet weak var bmNewsImageView: UIImageView!
+    @IBOutlet weak var publishedDateLabel: UILabel!
     @IBOutlet weak var contentLabel: UILabel!
     @IBOutlet weak var saveBtn: UIButton!
     
-    var categoryNews: CategoryNews?
+    var bookmarkNews: BookmarkNews?
     
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         parseContent()
         loadBookmarkIcon()
-        
-        let url = URL(string: categoryNews?.imageURL ?? "")
-        categoryNewsImage.kf.setImage(with: url)
-        categoryNewsTitle.text = categoryNews?.title
-        categoryNewsTitle.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+
+        let url = URL(string: bookmarkNews?.imageURL ?? "")
+        bmNewsImageView.kf.setImage(with: url)
+        bmNewsTitle.text = bookmarkNews?.title
+        bmNewsTitle.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         containerView.layer.cornerRadius = 30
     }
-
+    
     func parseContent() {
-        let articleUrl = URL(string: (self.categoryNews?.url)!)!
+        let articleUrl = URL(string: (self.bookmarkNews?.url)!)!
         Readability.parse(url: articleUrl, completion: { data in
-            self.datePublishedLabel.text = data?.datePublished ?? "No Date Published"
+            self.publishedDateLabel.text = data?.datePublished ?? "No Date Published"
             self.contentLabel.text = data?.text ?? "No Context"
         })
     }
@@ -48,22 +48,22 @@ class CategoryNewsDetailViewController: UIViewController {
     @IBAction func savePressed(_ sender: UIButton) {
         if Auth.auth().currentUser?.uid != nil{
                         
-            db.collection("bookmark").whereField("url", isEqualTo: categoryNews?.url)
+            db.collection("bookmark").whereField("url", isEqualTo: bookmarkNews?.url)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
                     } else if querySnapshot!.documents.count == 0 {
                         
                         //when url is new url added to the firestore
-                        if let url = self.categoryNews?.url, let user = Auth.auth().currentUser?.email {
+                        if let url = self.bookmarkNews?.url, let user = Auth.auth().currentUser?.email {
                             self.db.collection(Constant.FStore.collectionName).addDocument(data: [
                                 Constant.FStore.user: user,
                                 Constant.FStore.newsURL: url,
-                                Constant.FStore.newsTitle: self.categoryNews?.title,
-                                Constant.FStore.imageURL: self.categoryNews?.imageURL,
-                                Constant.FStore.description: self.categoryNews?.description,
+                                Constant.FStore.newsTitle: self.bookmarkNews?.title,
+                                Constant.FStore.imageURL: self.bookmarkNews?.imageURL,
+                                Constant.FStore.description: self.bookmarkNews?.description,
                                 Constant.FStore.content: self.contentLabel.text,
-                                Constant.FStore.publishedDate: self.datePublishedLabel.text,
+                                Constant.FStore.publishedDate: self.publishedDateLabel.text,
                                 Constant.FStore.dateField: Date().timeIntervalSince1970
                             ]) { (error) in
                                 if let e = error {
@@ -77,7 +77,7 @@ class CategoryNewsDetailViewController: UIViewController {
                     } else {
                         //remove news from bookmark
                         self.db.collection("bookmark")
-                            .whereField("url", isEqualTo: self.categoryNews?.url)
+                            .whereField("url", isEqualTo: self.bookmarkNews?.url)
                             .getDocuments() { (querySnapshot, err) in
                                 if let e = err {
                                     print("There was problem retrieving data from the firestore \(e)")
@@ -103,7 +103,7 @@ class CategoryNewsDetailViewController: UIViewController {
     
     func loadBookmarkIcon() {
         db.collection("bookmark")
-            .whereField("url", isEqualTo: categoryNews?.url)
+            .whereField("url", isEqualTo: bookmarkNews?.url)
             .getDocuments() { querySnapshot, error in
             
             if let e = error {
@@ -118,5 +118,4 @@ class CategoryNewsDetailViewController: UIViewController {
             }
         }
     }
-    
 }

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BookmarkTableViewCell" id="KGk-i7-Jjw" customClass="BookmarkTableViewCell" customModule="News" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hdk-WL-PnN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="MtH-gX-s4h">
+                                <rect key="frame" x="25" y="6" width="86" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="oih-YP-Exz"/>
+                                    <constraint firstAttribute="height" constant="86" id="uv8-av-sor"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmark News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iN3-qe-Jtg">
+                                <rect key="frame" x="121" y="5.9999999999999982" width="255" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Bookmark News Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0KQ-52-OIv">
+                                <rect key="frame" x="121" y="29.999999999999996" width="255" height="59.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iN3-qe-Jtg" firstAttribute="top" secondItem="hdk-WL-PnN" secondAttribute="top" constant="6" id="5Ni-TN-M0l"/>
+                            <constraint firstAttribute="bottom" secondItem="0KQ-52-OIv" secondAttribute="bottom" constant="10.33" id="Ed5-8n-ypR"/>
+                            <constraint firstItem="iN3-qe-Jtg" firstAttribute="leading" secondItem="MtH-gX-s4h" secondAttribute="trailing" constant="10" id="OfN-gC-7gr"/>
+                            <constraint firstAttribute="trailing" secondItem="iN3-qe-Jtg" secondAttribute="trailing" constant="14" id="ZY9-CH-10p"/>
+                            <constraint firstItem="0KQ-52-OIv" firstAttribute="leading" secondItem="MtH-gX-s4h" secondAttribute="trailing" constant="10" id="b32-1V-Wue"/>
+                            <constraint firstItem="0KQ-52-OIv" firstAttribute="firstBaseline" secondItem="iN3-qe-Jtg" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="fyr-Ss-Yvq"/>
+                            <constraint firstAttribute="trailing" secondItem="0KQ-52-OIv" secondAttribute="trailing" constant="14" id="huP-d5-IPh"/>
+                            <constraint firstItem="MtH-gX-s4h" firstAttribute="top" secondItem="hdk-WL-PnN" secondAttribute="top" constant="6" id="nad-5c-fqV"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MtH-gX-s4h" secondAttribute="bottom" constant="6" id="vkM-Ee-ZDw"/>
+                            <constraint firstItem="MtH-gX-s4h" firstAttribute="leading" secondItem="hdk-WL-PnN" secondAttribute="leading" constant="25" id="zaV-uZ-hLs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="hdk-WL-PnN" secondAttribute="bottom" id="BcU-D9-H8O"/>
+                    <constraint firstAttribute="trailing" secondItem="hdk-WL-PnN" secondAttribute="trailing" id="JDb-M4-Ske"/>
+                    <constraint firstItem="hdk-WL-PnN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="phc-hj-IPR"/>
+                    <constraint firstItem="hdk-WL-PnN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vcP-sw-ikK"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bookmarkNewsDescription" destination="0KQ-52-OIv" id="eNe-4s-QY0"/>
+                <outlet property="bookmarkNewsImage" destination="MtH-gX-s4h" id="der-UD-yPj"/>
+                <outlet property="bookmarkNewsTitle" destination="iN3-qe-Jtg" id="0Yu-Da-PXy"/>
+            </connections>
+            <point key="canvasLocation" x="64.615384615384613" y="20.616113744075829"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="random" width="262.33334350585938" height="148"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

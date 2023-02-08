@@ -182,13 +182,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Discover" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cg-Lg-wSn">
-                                <rect key="frame" x="31" y="117" width="163" height="36"/>
+                                <rect key="frame" x="31.000000000000007" y="117" width="122.66666666666669" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search news" translatesAutoresizingMaskIntoConstraints="NO" id="Us5-zc-bqM">
-                                <rect key="frame" x="20" y="174" width="390" height="56"/>
+                                <rect key="frame" x="20" y="173" width="390" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -199,7 +199,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ou8-IO-01Z">
-                                <rect key="frame" x="0.0" y="261" width="430" height="588"/>
+                                <rect key="frame" x="0.0" y="260" width="430" height="589"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ng6-Xl-KFH" id="a5C-Rd-84q"/>
@@ -210,7 +210,7 @@
                         <viewLayoutGuide key="safeArea" id="6qg-xH-e5M"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Us5-zc-bqM" firstAttribute="top" secondItem="0cg-Lg-wSn" secondAttribute="bottom" constant="21" id="3nq-ZW-Jat"/>
+                            <constraint firstItem="Us5-zc-bqM" firstAttribute="top" secondItem="0cg-Lg-wSn" secondAttribute="bottom" constant="20" id="3nq-ZW-Jat"/>
                             <constraint firstItem="Ou8-IO-01Z" firstAttribute="top" secondItem="Us5-zc-bqM" secondAttribute="bottom" constant="31" id="6ec-gN-0eg"/>
                             <constraint firstItem="6qg-xH-e5M" firstAttribute="bottom" secondItem="Ou8-IO-01Z" secondAttribute="bottom" id="BPZ-nW-oYK"/>
                             <constraint firstItem="Us5-zc-bqM" firstAttribute="leading" secondItem="6qg-xH-e5M" secondAttribute="leading" constant="20" id="Hp3-uX-l0I"/>
@@ -218,7 +218,7 @@
                             <constraint firstItem="0cg-Lg-wSn" firstAttribute="top" secondItem="6qg-xH-e5M" secondAttribute="top" constant="58" id="bB1-3F-7Bx"/>
                             <constraint firstItem="0cg-Lg-wSn" firstAttribute="leading" secondItem="6qg-xH-e5M" secondAttribute="leading" constant="31" id="cTW-eY-Gdq"/>
                             <constraint firstItem="Ou8-IO-01Z" firstAttribute="leading" secondItem="6qg-xH-e5M" secondAttribute="leading" id="gLB-Ot-enn"/>
-                            <constraint firstItem="6qg-xH-e5M" firstAttribute="trailing" secondItem="0cg-Lg-wSn" secondAttribute="trailing" constant="236" id="l9V-Sd-gi9"/>
+                            <constraint firstItem="6qg-xH-e5M" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0cg-Lg-wSn" secondAttribute="trailing" constant="20" id="l9V-Sd-gi9"/>
                             <constraint firstItem="6qg-xH-e5M" firstAttribute="trailing" secondItem="Ou8-IO-01Z" secondAttribute="trailing" id="zLC-Bc-5R7"/>
                         </constraints>
                     </view>
@@ -234,18 +234,46 @@
         <!--Bookmark-->
         <scene sceneID="5DI-4G-bPt">
             <objects>
-                <viewController id="4sH-9Q-kCs" sceneMemberID="viewController">
+                <viewController id="4sH-9Q-kCs" customClass="BookmarkViewController" customModule="News" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0io-Pr-30M">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmark" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DC-rF-G8q">
+                                <rect key="frame" x="31" y="117" width="143" height="36"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rEF-3D-wQI">
+                                <rect key="frame" x="0.0" y="173" width="430" height="676"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4sH-9Q-kCs" id="52f-6L-r9X"/>
+                                    <outlet property="delegate" destination="4sH-9Q-kCs" id="HpK-kU-ZMI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kYB-Lo-pmG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1DC-rF-G8q" firstAttribute="top" secondItem="kYB-Lo-pmG" secondAttribute="top" constant="58" id="3iG-YK-Eje"/>
+                            <constraint firstItem="kYB-Lo-pmG" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1DC-rF-G8q" secondAttribute="trailing" constant="20" id="3nK-mL-7K5"/>
+                            <constraint firstItem="rEF-3D-wQI" firstAttribute="top" secondItem="1DC-rF-G8q" secondAttribute="bottom" constant="20" id="5AR-tQ-uFZ"/>
+                            <constraint firstItem="kYB-Lo-pmG" firstAttribute="trailing" secondItem="rEF-3D-wQI" secondAttribute="trailing" id="DgK-0x-gDu"/>
+                            <constraint firstItem="rEF-3D-wQI" firstAttribute="leading" secondItem="kYB-Lo-pmG" secondAttribute="leading" id="IKR-As-Ggj"/>
+                            <constraint firstItem="1DC-rF-G8q" firstAttribute="leading" secondItem="kYB-Lo-pmG" secondAttribute="leading" constant="31" id="T8Z-mj-Sym"/>
+                            <constraint firstItem="kYB-Lo-pmG" firstAttribute="bottom" secondItem="rEF-3D-wQI" secondAttribute="bottom" id="qoe-Mp-K6z"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Bookmark" image="bookmark" catalog="system" selectedImage="bookmark.fill" id="6XF-2Y-ZUd"/>
+                    <connections>
+                        <outlet property="bookmarkTableView" destination="rEF-3D-wQI" id="q2G-9n-TAJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="de3-w6-6WL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="3"/>
+            <point key="canvasLocation" x="1763.7209302325582" y="2.5751072961373391"/>
         </scene>
         <!--Profile-->
         <scene sceneID="aEw-hL-ZMf">

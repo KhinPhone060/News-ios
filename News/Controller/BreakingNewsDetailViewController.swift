@@ -59,6 +59,11 @@ class BreakingNewsDetailViewController: UIViewController {
                             self.db.collection(Constant.FStore.collectionName).addDocument(data: [
                                 Constant.FStore.user: user,
                                 Constant.FStore.newsURL: url,
+                                Constant.FStore.newsTitle: self.news?.title,
+                                Constant.FStore.imageURL: self.news?.imageURL,
+                                Constant.FStore.description: self.news?.description,
+                                Constant.FStore.content: self.contentLabel.text,
+                                Constant.FStore.publishedDate: self.datePublished.text,
                                 Constant.FStore.dateField: Date().timeIntervalSince1970
                             ]) { (error) in
                                 if let e = error {

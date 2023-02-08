@@ -25,7 +25,11 @@ struct FStore {
     static let user = "user"
     static let newsURL = "url"
     static let dateField = "date"
-    static let isBookmarked = "isBookmarked"
+    static let newsTitle = "title"
+    static let imageURL = "imageURL"
+    static let description = "description"
+    static let content = "content"
+    static let publishedDate = "publishedDate"
     }
 }
 

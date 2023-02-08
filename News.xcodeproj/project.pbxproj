@@ -30,6 +30,10 @@
 		F76BE7EB298E84BD006EE3B8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76BE7EA298E84BD006EE3B8 /* ProfileViewController.swift */; };
 		F76BE7ED298E84E1006EE3B8 /* BreakingNewsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76BE7EC298E84E1006EE3B8 /* BreakingNewsDetailViewController.swift */; };
 		F78495FD2992179D009C06A3 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = F78495FC2992179D009C06A3 /* Constant.swift */; };
+		F7BE87732992B6FC00722FED /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE87712992B6FC00722FED /* BookmarkTableViewCell.swift */; };
+		F7BE87742992B6FC00722FED /* BookmarkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7BE87722992B6FC00722FED /* BookmarkTableViewCell.xib */; };
+		F7BE87782992BAAE00722FED /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7BE87772992BAAE00722FED /* BookmarkViewController.swift */; };
+		F7E8A05A2993574400A9E0C7 /* BookmarkNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7E8A0592993574400A9E0C7 /* BookmarkNews.swift */; };
 		F7FFCB53298E058E00FF5FAF /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFCB52298E058E00FF5FAF /* SearchViewController.swift */; };
 		F7FFCB55298E097B00FF5FAF /* EverythingNewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFCB54298E097B00FF5FAF /* EverythingNewsService.swift */; };
 		F7FFCB57298E09EE00FF5FAF /* EverythingNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FFCB56298E09EE00FF5FAF /* EverythingNews.swift */; };
@@ -67,6 +71,10 @@
 		F76BE7EA298E84BD006EE3B8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		F76BE7EC298E84E1006EE3B8 /* BreakingNewsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakingNewsDetailViewController.swift; sourceTree = "<group>"; };
 		F78495FC2992179D009C06A3 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		F7BE87712992B6FC00722FED /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		F7BE87722992B6FC00722FED /* BookmarkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookmarkTableViewCell.xib; sourceTree = "<group>"; };
+		F7BE87772992BAAE00722FED /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		F7E8A0592993574400A9E0C7 /* BookmarkNews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BookmarkNews.swift; path = News/Model/BookmarkNews.swift; sourceTree = SOURCE_ROOT; };
 		F7FFCB52298E058E00FF5FAF /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F7FFCB54298E097B00FF5FAF /* EverythingNewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingNewsService.swift; sourceTree = "<group>"; };
 		F7FFCB56298E09EE00FF5FAF /* EverythingNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EverythingNews.swift; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 				F70F5118298F7C8A00485CC6 /* EverythingNewsDetailViewController.swift */,
 				F764F7F52990DC1500B60C79 /* SignInViewController.swift */,
 				F764F7F72990DC2800B60C79 /* SignUpViewController.swift */,
+				F7BE87772992BAAE00722FED /* BookmarkViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -129,6 +138,8 @@
 				F7111E01298CC1FB0025CDAB /* CategoryNewsTableViewCell.xib */,
 				F7FFCB58298E0C7F00FF5FAF /* EverythingNewsTableViewCell.swift */,
 				F7FFCB59298E0C7F00FF5FAF /* EverythingNewsTableViewCell.xib */,
+				F7BE87712992B6FC00722FED /* BookmarkTableViewCell.swift */,
+				F7BE87722992B6FC00722FED /* BookmarkTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -139,6 +150,7 @@
 				F75E4A8D298BD9D0000DC7E6 /* BreakingNews.swift */,
 				F7111E04298CCB170025CDAB /* CategoryNews.swift */,
 				F7FFCB56298E09EE00FF5FAF /* EverythingNews.swift */,
+				F7E8A0592993574400A9E0C7 /* BookmarkNews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +264,7 @@
 				F74D40EA298B567800ECBF41 /* LaunchScreen.storyboard in Resources */,
 				F74D40E7298B567800ECBF41 /* Assets.xcassets in Resources */,
 				F73A541B298B75A000872AF1 /* BreakingNewsCollectionViewCell.xib in Resources */,
+				F7BE87742992B6FC00722FED /* BookmarkTableViewCell.xib in Resources */,
 				F7FFCB5B298E0C7F00FF5FAF /* EverythingNewsTableViewCell.xib in Resources */,
 				F7111E03298CC1FB0025CDAB /* CategoryNewsTableViewCell.xib in Resources */,
 				F74D40E5298B567700ECBF41 /* Main.storyboard in Resources */,
@@ -312,9 +325,11 @@
 				F70F5119298F7C8A00485CC6 /* EverythingNewsDetailViewController.swift in Sources */,
 				F7FFCB5A298E0C7F00FF5FAF /* EverythingNewsTableViewCell.swift in Sources */,
 				F7FFCB55298E097B00FF5FAF /* EverythingNewsService.swift in Sources */,
+				F7BE87782992BAAE00722FED /* BookmarkViewController.swift in Sources */,
 				F764F7F62990DC1500B60C79 /* SignInViewController.swift in Sources */,
 				F7FFCB53298E058E00FF5FAF /* SearchViewController.swift in Sources */,
 				F75E4A90298BDAA0000DC7E6 /* NewsService.swift in Sources */,
+				F7E8A05A2993574400A9E0C7 /* BookmarkNews.swift in Sources */,
 				F74D40E2298B567700ECBF41 /* HomeViewController.swift in Sources */,
 				F74D40DE298B567700ECBF41 /* AppDelegate.swift in Sources */,
 				F7111E05298CCB170025CDAB /* CategoryNews.swift in Sources */,
@@ -323,6 +338,7 @@
 				F73A5419298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift in Sources */,
 				F75E4A8E298BD9D0000DC7E6 /* BreakingNews.swift in Sources */,
 				F78495FD2992179D009C06A3 /* Constant.swift in Sources */,
+				F7BE87732992B6FC00722FED /* BookmarkTableViewCell.swift in Sources */,
 				F764F7F82990DC2800B60C79 /* SignUpViewController.swift in Sources */,
 				F74D40E0298B567700ECBF41 /* SceneDelegate.swift in Sources */,
 				F7111E07298CCB590025CDAB /* CategoryNewsService.swift in Sources */,

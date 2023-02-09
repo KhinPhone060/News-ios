@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -23,37 +24,52 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="QES-Le-DXy">
                                 <rect key="frame" x="0.0" y="0.0" width="200" height="120"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="0eZ-gg-PJv"/>
-                                    <constraint firstAttribute="width" constant="200" id="X3R-Jn-KcA"/>
+                                    <constraint firstAttribute="height" constant="120" id="Uzg-sh-lUz"/>
+                                    <constraint firstAttribute="width" constant="200" id="n09-mN-xtG"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking News Title Breaking News Title Breaking News Title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTq-C6-oeg">
                                 <rect key="frame" x="0.0" y="125" width="200" height="82"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QES-Le-DXy" firstAttribute="leading" secondItem="eyF-TS-cKD" secondAttribute="leading" id="4sL-bS-kkO"/>
-                            <constraint firstAttribute="trailing" secondItem="QES-Le-DXy" secondAttribute="trailing" id="7P2-bs-Bu4"/>
-                            <constraint firstItem="QES-Le-DXy" firstAttribute="top" secondItem="eyF-TS-cKD" secondAttribute="top" id="ipU-iX-182"/>
-                            <constraint firstAttribute="bottom" secondItem="hTq-C6-oeg" secondAttribute="bottom" id="lSC-zu-S0v"/>
-                            <constraint firstItem="hTq-C6-oeg" firstAttribute="top" secondItem="QES-Le-DXy" secondAttribute="bottom" constant="5" id="rcd-Xt-jNd"/>
-                            <constraint firstItem="hTq-C6-oeg" firstAttribute="leading" secondItem="eyF-TS-cKD" secondAttribute="leading" id="siA-dJ-Me0"/>
-                            <constraint firstAttribute="trailing" secondItem="hTq-C6-oeg" secondAttribute="trailing" id="v2S-ga-SWu"/>
+                            <constraint firstAttribute="bottom" secondItem="hTq-C6-oeg" secondAttribute="bottom" id="XMg-is-zXt"/>
+                            <constraint firstAttribute="trailing" secondItem="QES-Le-DXy" secondAttribute="trailing" id="fu9-VD-RfK"/>
+                            <constraint firstItem="QES-Le-DXy" firstAttribute="top" secondItem="eyF-TS-cKD" secondAttribute="top" id="gSW-ia-J5h"/>
+                            <constraint firstAttribute="trailing" secondItem="hTq-C6-oeg" secondAttribute="trailing" id="hPS-jN-g9H"/>
+                            <constraint firstItem="hTq-C6-oeg" firstAttribute="top" secondItem="QES-Le-DXy" secondAttribute="bottom" constant="5" id="lqf-P6-8bv"/>
+                            <constraint firstItem="QES-Le-DXy" firstAttribute="leading" secondItem="eyF-TS-cKD" secondAttribute="leading" id="nhJ-dm-Kkz"/>
+                            <constraint firstItem="hTq-C6-oeg" firstAttribute="leading" secondItem="eyF-TS-cKD" secondAttribute="leading" id="qHA-ot-gy0"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="eyF-TS-cKD" secondAttribute="trailing" id="fIS-qW-VFR"/>
-                    <constraint firstAttribute="bottom" secondItem="eyF-TS-cKD" secondAttribute="bottom" id="hab-L6-2Ed"/>
-                    <constraint firstItem="eyF-TS-cKD" firstAttribute="top" secondItem="RjD-PW-juY" secondAttribute="top" id="hzf-eL-6t2"/>
-                    <constraint firstItem="eyF-TS-cKD" firstAttribute="leading" secondItem="RjD-PW-juY" secondAttribute="leading" id="pwv-fw-evK"/>
+                    <constraint firstItem="eyF-TS-cKD" firstAttribute="top" secondItem="RjD-PW-juY" secondAttribute="top" id="XDh-aG-5SC"/>
+                    <constraint firstAttribute="bottom" secondItem="eyF-TS-cKD" secondAttribute="bottom" id="auk-8w-G1d"/>
+                    <constraint firstItem="eyF-TS-cKD" firstAttribute="leading" secondItem="RjD-PW-juY" secondAttribute="leading" id="bFx-MI-IBx"/>
+                    <constraint firstAttribute="trailing" secondItem="eyF-TS-cKD" secondAttribute="trailing" id="jFH-bh-fij"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </collectionViewCellContentView>
             <size key="customSize" width="196" height="50"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="breakingNewsImage" destination="QES-Le-DXy" id="upx-YP-ddl"/>
                 <outlet property="breakingNewsTitle" destination="hTq-C6-oeg" id="v3L-QS-crn"/>

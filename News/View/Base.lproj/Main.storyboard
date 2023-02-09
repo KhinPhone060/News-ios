@@ -7,7 +7,6 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -66,40 +65,10 @@
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="5K2-3O-h5s" customClass="BreakingNewsCollectionViewCell" customModule="News" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="0.0" width="200" height="207"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CYi-h6-ePm">
-                                                            <rect key="frame" x="0.0" y="0.0" width="200" height="207"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                            <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-2Q-bT9">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="150"/>
-                                                                </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Breaking news title" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTM-w9-VqT">
-                                                                    <rect key="frame" x="0.0" y="157" width="200" height="50"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="50" id="hak-5U-IU3"/>
-                                                                    </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="KTM-w9-VqT" secondAttribute="trailing" id="3Xg-AY-9xt"/>
-                                                                <constraint firstItem="dsd-2Q-bT9" firstAttribute="leading" secondItem="CYi-h6-ePm" secondAttribute="leading" id="3qC-X3-ola"/>
-                                                                <constraint firstItem="KTM-w9-VqT" firstAttribute="top" secondItem="dsd-2Q-bT9" secondAttribute="bottom" constant="7.0000000000000853" id="EcI-tT-bzn"/>
-                                                                <constraint firstAttribute="bottom" secondItem="KTM-w9-VqT" secondAttribute="bottom" constant="-8.5265128291212022e-14" id="Eyc-0h-nzk"/>
-                                                                <constraint firstItem="KTM-w9-VqT" firstAttribute="leading" secondItem="CYi-h6-ePm" secondAttribute="leading" id="VMK-Ph-bGO"/>
-                                                                <constraint firstItem="dsd-2Q-bT9" firstAttribute="top" secondItem="CYi-h6-ePm" secondAttribute="top" id="iyx-tn-fM7"/>
-                                                                <constraint firstAttribute="trailing" secondItem="dsd-2Q-bT9" secondAttribute="trailing" id="vN4-Ta-nAY"/>
-                                                            </constraints>
-                                                        </collectionViewCellContentView>
-                                                        <size key="customSize" width="200" height="207"/>
-                                                    </collectionViewCell>
-                                                </cells>
+                                                <cells/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="B5j-Ne-uvk"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="xsu-Sw-1sL"/>
@@ -115,6 +84,11 @@
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OFk-0f-TUT">
                                                 <rect key="frame" x="0.0" y="364" width="430" height="426"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <sections/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isUserInteractionDisabledWhenSkeletonIsActive" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ga7-sg-LSV"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="j6G-Wf-Q8R"/>
@@ -200,6 +174,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ou8-IO-01Z">
                                 <rect key="frame" x="0.0" y="260" width="430" height="589"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="ng6-Xl-KFH" id="a5C-Rd-84q"/>
                                     <outlet property="delegate" destination="ng6-Xl-KFH" id="AdO-pV-fF6"/>

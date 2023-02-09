@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,65 +18,65 @@
                 <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lK1-d6-Oo4">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-fY-WrW">
-                                <rect key="frame" x="25" y="6" width="86" height="86"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="1SY-CX-lqO"/>
-                                    <constraint firstAttribute="height" constant="86" id="fhu-fz-9bu"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-2L-9CJ">
-                                <rect key="frame" x="121" y="5.9999999999999982" width="255" height="20.333333333333329"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Category news description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-a7-agn">
-                                <rect key="frame" x="121" y="34.333333333333343" width="255" height="59.666666666666657"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-fY-WrW">
+                        <rect key="frame" x="25" y="6" width="86" height="86"/>
                         <constraints>
-                            <constraint firstItem="eTe-2L-9CJ" firstAttribute="top" secondItem="lK1-d6-Oo4" secondAttribute="top" constant="6" id="3at-KR-u5N"/>
-                            <constraint firstItem="eTe-2L-9CJ" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="ada-pa-PMh"/>
-                            <constraint firstItem="Ijc-fY-WrW" firstAttribute="top" secondItem="lK1-d6-Oo4" secondAttribute="top" constant="6" id="bUN-t2-y6X"/>
-                            <constraint firstItem="Ijc-fY-WrW" firstAttribute="leading" secondItem="lK1-d6-Oo4" secondAttribute="leading" constant="25" id="cNa-6x-0Dd"/>
-                            <constraint firstItem="SCK-a7-agn" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="gUC-ug-KkI"/>
-                            <constraint firstItem="SCK-a7-agn" firstAttribute="top" secondItem="eTe-2L-9CJ" secondAttribute="bottom" constant="8" symbolic="YES" id="kHt-4z-pMY"/>
-                            <constraint firstAttribute="trailing" secondItem="eTe-2L-9CJ" secondAttribute="trailing" constant="14" id="mLL-3O-bkR"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ijc-fY-WrW" secondAttribute="bottom" constant="6" id="qFl-GR-tnm"/>
-                            <constraint firstAttribute="trailing" secondItem="SCK-a7-agn" secondAttribute="trailing" constant="14" id="t2r-uT-wLb"/>
-                            <constraint firstAttribute="bottom" secondItem="SCK-a7-agn" secondAttribute="bottom" constant="6" id="w8J-SK-58C"/>
+                            <constraint firstAttribute="width" constant="86" id="1SY-CX-lqO"/>
+                            <constraint firstAttribute="height" constant="86" id="fhu-fz-9bu"/>
                         </constraints>
-                    </view>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-2L-9CJ">
+                        <rect key="frame" x="121" y="5.9999999999999982" width="255" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Category news description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-a7-agn">
+                        <rect key="frame" x="121" y="34.333333333333343" width="255" height="59.666666666666657"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemGrayColor"/>
+                        <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="lK1-d6-Oo4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="1UU-qw-pSG"/>
-                    <constraint firstItem="lK1-d6-Oo4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="H1p-Nw-KAr"/>
-                    <constraint firstAttribute="trailing" secondItem="lK1-d6-Oo4" secondAttribute="trailing" id="cjA-rV-Mtp"/>
-                    <constraint firstAttribute="bottom" secondItem="lK1-d6-Oo4" secondAttribute="bottom" id="ltV-ia-tFL"/>
+                    <constraint firstAttribute="bottom" secondItem="Ijc-fY-WrW" secondAttribute="bottom" constant="8" id="EFT-Gc-iO3"/>
+                    <constraint firstAttribute="trailing" secondItem="eTe-2L-9CJ" secondAttribute="trailing" constant="14" id="LCD-B3-otp"/>
+                    <constraint firstItem="eTe-2L-9CJ" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="Pk5-3y-XeQ"/>
+                    <constraint firstItem="SCK-a7-agn" firstAttribute="top" secondItem="eTe-2L-9CJ" secondAttribute="bottom" constant="8.0000000000000142" id="eS2-3Y-wh9"/>
+                    <constraint firstAttribute="trailing" secondItem="SCK-a7-agn" secondAttribute="trailing" constant="14" id="lgN-aJ-X3z"/>
+                    <constraint firstItem="eTe-2L-9CJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5.9999999999999982" id="lwD-8o-Yox"/>
+                    <constraint firstItem="SCK-a7-agn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="121" id="nCN-xy-QCP"/>
+                    <constraint firstAttribute="bottom" secondItem="SCK-a7-agn" secondAttribute="bottom" constant="6" id="o4X-f6-5Xg"/>
+                    <constraint firstItem="Ijc-fY-WrW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="qSh-Be-Ifu"/>
+                    <constraint firstItem="Ijc-fY-WrW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="usN-vE-Ckb"/>
                 </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="categoryNewsDescription" destination="SCK-a7-agn" id="Pdr-Ti-I4a"/>
                 <outlet property="categoryNewsImage" destination="Ijc-fY-WrW" id="3mb-Ck-cKY"/>
                 <outlet property="categoryNewsTitle" destination="eTe-2L-9CJ" id="XCW-io-XTI"/>
             </connections>
-            <point key="canvasLocation" x="-23.076923076923077" y="20.616113744075829"/>
+            <point key="canvasLocation" x="151" y="21"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="random" width="262.33334350585938" height="148"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

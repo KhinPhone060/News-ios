@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class SearchViewController: UIViewController {
     
@@ -30,15 +31,20 @@ class SearchViewController: UIViewController {
 }
 
 //MARK: - UITableView delegate and datasource
-extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
+extension SearchViewController: UITableViewDelegate, SkeletonTableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return everythingNewsList.count
     }
     
+    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
+        return "EverythingNewsTableViewCell"
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EverythingNewsTableViewCell", for: indexPath) as! EverythingNewsTableViewCell
         cell.configEverythingNewsCell(everythingNews: self.everythingNewsList[indexPath.row])
+        cell.showAnimatedGradientSkeleton()
         return cell
     }
     
@@ -58,6 +64,7 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         getEverythingNews(searchKeyword: searchBar.text!)
+        //self.searchTableView.showSkeleton(usingColor: .wetAsphalt, transition: .none)
     }
 }
 

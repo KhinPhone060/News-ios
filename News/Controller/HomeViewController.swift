@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SkeletonView
 
 class HomeViewController: UIViewController {
     
@@ -31,8 +32,14 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        getLatestNews()
-        getCategorizedNews(category: "Business")
+        self.getCategorizedNews(category: "Business")
+
+        DispatchQueue.main.asyncAfter(deadline: .now()+3) {
+            self.getLatestNews()
+            self.breakingNewsCollectionView.stopSkeletonAnimation()
+            self.breakingNewsCollectionView.hideSkeleton(reloadDataAfter: true, transition: .crossDissolve(0.25))
+            self.breakingNewsCollectionView.reloadData()
+        }
         
         //register collection view cell
         let cellNib = UINib(nibName: "BreakingNewsCollectionViewCell", bundle: nil)
@@ -56,11 +63,18 @@ class HomeViewController: UIViewController {
             self.getCategorizedNews(category: categoryList[index])
         }
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        breakingNewsCollectionView.showAnimatedGradientSkeleton()
+    }
 }
 
 //MARK: - UICollectionView delegate and datasource
-extension HomeViewController: UICollectionViewDelegate,UICollectionViewDataSource {
-    
+extension HomeViewController: UICollectionViewDelegate,SkeletonCollectionViewDataSource {
+    func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> SkeletonView.ReusableCellIdentifier {
+        return "BreakingNewsCollectionViewCell"
+    }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.newsList.count
@@ -117,6 +131,7 @@ extension HomeViewController {
     }
 
     func getCategorizedNews(category:String) {
+        self.categoryNewsList = []
         let categoryNewsService = CategoryNewsService()
         categoryNewsService.fetchCategoryNews(completionHandler: {[weak self] categoryNewsList in
             self?.categoryNewsList = categoryNewsList

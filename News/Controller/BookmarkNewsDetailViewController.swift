@@ -48,7 +48,8 @@ class BookmarkNewsDetailViewController: UIViewController {
     @IBAction func savePressed(_ sender: UIButton) {
         if Auth.auth().currentUser?.uid != nil{
                         
-            db.collection("bookmark").whereField("url", isEqualTo: bookmarkNews?.url)
+            db.collection(Constant.FStore.collectionName)
+                .whereField(Constant.FStore.newsURL, isEqualTo: bookmarkNews?.url)
                 .getDocuments() { (querySnapshot, err) in
                     if let err = err {
                         print("Error getting documents: \(err)")
@@ -76,8 +77,8 @@ class BookmarkNewsDetailViewController: UIViewController {
                         }
                     } else {
                         //remove news from bookmark
-                        self.db.collection("bookmark")
-                            .whereField("url", isEqualTo: self.bookmarkNews?.url)
+                        self.db.collection(Constant.FStore.collectionName)
+                            .whereField(Constant.FStore.newsURL, isEqualTo: self.bookmarkNews?.url)
                             .getDocuments() { (querySnapshot, err) in
                                 if let e = err {
                                     print("There was problem retrieving data from the firestore \(e)")
@@ -96,14 +97,14 @@ class BookmarkNewsDetailViewController: UIViewController {
             
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+            let loginNavController = storyboard.instantiateViewController(identifier: Constant.loginNavigationVC)
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController)
         }
     }
     
     func loadBookmarkIcon() {
-        db.collection("bookmark")
-            .whereField("url", isEqualTo: bookmarkNews?.url)
+        db.collection(Constant.FStore.collectionName)
+            .whereField(Constant.FStore.newsURL, isEqualTo: bookmarkNews?.url)
             .getDocuments() { querySnapshot, error in
             
             if let e = error {

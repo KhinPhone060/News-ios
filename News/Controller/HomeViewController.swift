@@ -42,12 +42,12 @@ class HomeViewController: UIViewController {
         }
         
         //register collection view cell
-        let cellNib = UINib(nibName: "BreakingNewsCollectionViewCell", bundle: nil)
-        breakingNewsCollectionView.register(cellNib, forCellWithReuseIdentifier: "BreakingNewsCollectionViewCell")
+        let cellNib = UINib(nibName: Constant.breakingNewsCollectionViewCell, bundle: nil)
+        breakingNewsCollectionView.register(cellNib, forCellWithReuseIdentifier: Constant.breakingNewsCollectionViewCell)
         
         //register table view cell
-        let tbcellNib = UINib(nibName: "CategoryNewsTableViewCell", bundle: nil)
-        categoryNewsTableView.register(tbcellNib, forCellReuseIdentifier: "CategoryNewsTableViewCell")
+        let tbcellNib = UINib(nibName: Constant.categoryNewsTableViewCell, bundle: nil)
+        categoryNewsTableView.register(tbcellNib, forCellReuseIdentifier: Constant.categoryNewsTableViewCell)
         
         //tabbar view configuration
         let categoryList: [String] = ["Business","Entertainment","Science","Health","Sports","Technology"]
@@ -73,7 +73,7 @@ class HomeViewController: UIViewController {
 //MARK: - UICollectionView delegate and datasource
 extension HomeViewController: UICollectionViewDelegate,SkeletonCollectionViewDataSource {
     func collectionSkeletonView(_ skeletonView: UICollectionView, cellIdentifierForItemAt indexPath: IndexPath) -> SkeletonView.ReusableCellIdentifier {
-        return "BreakingNewsCollectionViewCell"
+        return Constant.breakingNewsCollectionViewCell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -81,14 +81,14 @@ extension HomeViewController: UICollectionViewDelegate,SkeletonCollectionViewDat
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BreakingNewsCollectionViewCell", for: indexPath) as! BreakingNewsCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constant.breakingNewsCollectionViewCell, for: indexPath) as! BreakingNewsCollectionViewCell
         cell.configCell(news: self.newsList[indexPath.row])
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if newsList.count > 0 {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "showNewsDetail") as? BreakingNewsDetailViewController {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: Constant.breakingNewsDetailVC) as? BreakingNewsDetailViewController {
                 vc.news = newsList[indexPath.row]
                 tabBarController?.showDetailViewController(vc, sender: self)
             }
@@ -104,14 +104,14 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryNewsTableViewCell", for: indexPath) as! CategoryNewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.categoryNewsTableViewCell, for: indexPath) as! CategoryNewsTableViewCell
         cell.configCategoryNewsCell(categoryNews: self.categoryNewsList[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if newsList.count > 0 {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "showCategoryNewsDetail") as? CategoryNewsDetailViewController {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: Constant.categoryNewsDetailVC) as? CategoryNewsDetailViewController {
                 vc.categoryNews = categoryNewsList[indexPath.row]
                 tabBarController?.showDetailViewController(vc, sender: self)
             }

@@ -24,8 +24,10 @@ class ProfileViewController: UIViewController {
     @IBAction func logoutPressed(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
+            
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let loginNavController = storyboard.instantiateViewController(identifier: "LoginNavigationController")
+            let loginNavController = storyboard.instantiateViewController(identifier: Constant.loginNavigationVC)
+            
             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(loginNavController)
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)

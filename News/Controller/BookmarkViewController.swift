@@ -10,7 +10,7 @@ import FirebaseFirestore
 import ReadabilityKit
 import FirebaseAuth
 
-class BookmarkViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class BookmarkViewController: UIViewController {
     
     @IBOutlet weak var bookmarkTableView: UITableView!
     
@@ -24,17 +24,21 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
         loadBookmarkedNews()
 
         // register table view cell
-        let tbcellNib = UINib(nibName: "BookmarkTableViewCell", bundle: nil)
-        bookmarkTableView.register(tbcellNib, forCellReuseIdentifier: "BookmarkTableViewCell")
+        let tbcellNib = UINib(nibName: Constant.bookmarkTableViewCell, bundle: nil)
+        bookmarkTableView.register(tbcellNib, forCellReuseIdentifier: Constant.bookmarkTableViewCell)
         
     }
+}
+
+//MARK: - UITableView delegate and datasource
+extension BookmarkViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bookmarkedNewsList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "BookmarkTableViewCell", for: indexPath) as! BookmarkTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.bookmarkTableViewCell, for: indexPath) as! BookmarkTableViewCell
         
         cell.configBookmarkNewsCell(bookmarkNews: bookmarkedNewsList[indexPath.row])
         
@@ -43,16 +47,19 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if bookmarkedNewsList.count > 0 {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "showBookmarkNewsDetail") as? BookmarkNewsDetailViewController {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: Constant.bookmarkNewsDetailVC) as? BookmarkNewsDetailViewController {
                 vc.bookmarkNews = bookmarkedNewsList[indexPath.row]
                 tabBarController?.showDetailViewController(vc, sender: self)
             }
         }
     }
+}
+
+//MARK: - Data manipulation
+extension BookmarkViewController {
     
     func loadBookmarkedNews() {
-        //if Auth.auth().currentUser?.email
-        db.collection("bookmark")
+        db.collection(Constant.FStore.collectionName)
             .order(by: Constant.FStore.dateField ,descending: true)
             .addSnapshotListener() { (querySnapshot, err) in
                 
@@ -64,13 +71,13 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
                             let data = doc.data()
-                            if let title = data["title"] as? String,
-                               let imageURL = data["imageURL"] as? String,
-                               let url = data["url"] as? String,
-                               let description = data["description"] as? String,
-                               let content = data["content"] as? String,
-                               let publishedDate = data["publishedDate"] as? String,
-                               let user = data["user"] as? String
+                            if let title = data[Constant.FStore.newsTitle] as? String,
+                               let imageURL = data[Constant.FStore.imageURL] as? String,
+                               let url = data[Constant.FStore.newsURL] as? String,
+                               let description = data[Constant.FStore.description] as? String,
+                               let content = data[Constant.FStore.content] as? String,
+                               let publishedDate = data[Constant.FStore.content] as? String,
+                               let user = data[Constant.FStore.user] as? String
                             {
                                 if Auth.auth().currentUser?.email == user {
                                     let newBookmark = BookmarkNews(title: title, imageURL: imageURL, url: url, description: description, content: content, publishedDate: publishedDate)
@@ -87,5 +94,4 @@ class BookmarkViewController: UIViewController, UITableViewDelegate, UITableView
                 }
             }
     }
-
 }

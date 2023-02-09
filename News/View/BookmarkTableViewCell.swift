@@ -26,7 +26,7 @@ class BookmarkTableViewCell: UITableViewCell {
     }
     
     func configBookmarkNewsCell(bookmarkNews: BookmarkNews) {
-        let url = URL(string: bookmarkNews.imageURL ?? "https://www.shutterstock.com/image-vector/no-image-available-icon-template-260nw-1036735678.jpg")
+        let url = URL(string: bookmarkNews.imageURL )
         bookmarkNewsImage.kf.setImage(with: url)
         bookmarkNewsTitle.text = bookmarkNews.title
         bookmarkNewsDescription.text = bookmarkNews.description

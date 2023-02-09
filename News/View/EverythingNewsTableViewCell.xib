@@ -27,27 +27,18 @@
                                     <constraint firstAttribute="width" constant="86" id="BiU-zj-8lE"/>
                                     <constraint firstAttribute="height" constant="86" id="jlS-pJ-dNa"/>
                                 </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Everything News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZP-5w-5E0">
                                 <rect key="frame" x="121" y="5.9999999999999982" width="255" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Everything news description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7eC-3Y-TUM">
                                 <rect key="frame" x="121" y="29.999999999999996" width="255" height="59.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGrayColor"/>
                                 <nil key="highlightedColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -63,9 +54,6 @@
                             <constraint firstAttribute="bottom" secondItem="7eC-3Y-TUM" secondAttribute="bottom" constant="10.333333333333343" id="xQa-rH-WTb"/>
                             <constraint firstItem="cqa-rR-9RW" firstAttribute="leading" secondItem="ibh-op-YbD" secondAttribute="leading" constant="25" id="yjR-no-Q29"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                        </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
                 <constraints>
@@ -74,14 +62,8 @@
                     <constraint firstAttribute="trailing" secondItem="ibh-op-YbD" secondAttribute="trailing" id="S2A-Jz-gGH"/>
                     <constraint firstItem="ibh-op-YbD" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="wSM-F7-Kbk"/>
                 </constraints>
-                <userDefinedRuntimeAttributes>
-                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="everythingNewsDescription" destination="7eC-3Y-TUM" id="phZ-6o-czE"/>
                 <outlet property="everythingNewsTitle" destination="eZP-5w-5E0" id="t7w-x4-FO8"/>

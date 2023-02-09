@@ -52,9 +52,9 @@
                     <constraint firstAttribute="trailing" secondItem="eTe-2L-9CJ" secondAttribute="trailing" constant="14" id="LCD-B3-otp"/>
                     <constraint firstItem="eTe-2L-9CJ" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="Pk5-3y-XeQ"/>
                     <constraint firstItem="SCK-a7-agn" firstAttribute="top" secondItem="eTe-2L-9CJ" secondAttribute="bottom" constant="8.0000000000000142" id="eS2-3Y-wh9"/>
+                    <constraint firstItem="SCK-a7-agn" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="hd2-SU-iAd"/>
                     <constraint firstAttribute="trailing" secondItem="SCK-a7-agn" secondAttribute="trailing" constant="14" id="lgN-aJ-X3z"/>
                     <constraint firstItem="eTe-2L-9CJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5.9999999999999982" id="lwD-8o-Yox"/>
-                    <constraint firstItem="SCK-a7-agn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="121" id="nCN-xy-QCP"/>
                     <constraint firstAttribute="bottom" secondItem="SCK-a7-agn" secondAttribute="bottom" constant="6" id="o4X-f6-5Xg"/>
                     <constraint firstItem="Ijc-fY-WrW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="qSh-Be-Ifu"/>
                     <constraint firstItem="Ijc-fY-WrW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="usN-vE-Ckb"/>

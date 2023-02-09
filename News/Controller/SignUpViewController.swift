@@ -22,7 +22,7 @@ class SignUpViewController: UIViewController {
                 } else {
                     //Navigate to home view controller
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                        let mainTabBarController = storyboard.instantiateViewController(identifier: "MainTabBarController")
+                    let mainTabBarController = storyboard.instantiateViewController(identifier: Constant.mainTabBarVC)
                     (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.changeRootViewController(mainTabBarController)
                 }
             }

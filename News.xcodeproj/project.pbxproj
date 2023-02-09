@@ -135,8 +135,8 @@
 			children = (
 				F75E4A91298BE8B0000DC7E6 /* SMTabbar.swift */,
 				F74D40E3298B567700ECBF41 /* Main.storyboard */,
-				F73A541A298B759F00872AF1 /* BreakingNewsCollectionViewCell.xib */,
 				F73A5418298B72CC00872AF1 /* BreakingNewsCollectionViewCell.swift */,
+				F73A541A298B759F00872AF1 /* BreakingNewsCollectionViewCell.xib */,
 				F7111E00298CC1FB0025CDAB /* CategoryNewsTableViewCell.swift */,
 				F7111E01298CC1FB0025CDAB /* CategoryNewsTableViewCell.xib */,
 				F7FFCB58298E0C7F00FF5FAF /* EverythingNewsTableViewCell.swift */,
@@ -196,10 +196,10 @@
 				F733F483298BD5AE00F18B69 /* Controller */,
 				F733F486298BD63700F18B69 /* Network Manager */,
 				F74D40E6298B567800ECBF41 /* Assets.xcassets */,
+				F78495FC2992179D009C06A3 /* Constant.swift */,
 				F74D40E8298B567800ECBF41 /* LaunchScreen.storyboard */,
 				F74D40EB298B567800ECBF41 /* Info.plist */,
 				F74C504A29914C5D0032569E /* GoogleService-Info.plist */,
-				F78495FC2992179D009C06A3 /* Constant.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";

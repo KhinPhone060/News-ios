@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SkeletonView
 
 class SearchViewController: UIViewController {
     
@@ -25,32 +24,27 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
 
         //register table view cell
-        let tbcellNib = UINib(nibName: "EverythingNewsTableViewCell", bundle: nil)
-        searchTableView.register(tbcellNib, forCellReuseIdentifier: "EverythingNewsTableViewCell")
+        let tbcellNib = UINib(nibName: Constant.everythingNewsTableViewCell, bundle: nil)
+        searchTableView.register(tbcellNib, forCellReuseIdentifier: Constant.everythingNewsTableViewCell)
     }
 }
 
 //MARK: - UITableView delegate and datasource
-extension SearchViewController: UITableViewDelegate, SkeletonTableViewDataSource {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return everythingNewsList.count
     }
     
-    func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
-        return "EverythingNewsTableViewCell"
-    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EverythingNewsTableViewCell", for: indexPath) as! EverythingNewsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.everythingNewsTableViewCell, for: indexPath) as! EverythingNewsTableViewCell
         cell.configEverythingNewsCell(everythingNews: self.everythingNewsList[indexPath.row])
-        cell.showAnimatedGradientSkeleton()
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if everythingNewsList.count > 0 {
-            if let vc = storyboard?.instantiateViewController(withIdentifier: "showEverythingNewsDetail") as? EverythingNewsDetailViewController {
+            if let vc = storyboard?.instantiateViewController(withIdentifier: Constant.everythingNewsDetailVC) as? EverythingNewsDetailViewController {
                 vc.everythingNews = everythingNewsList[indexPath.row]
                 tabBarController?.showDetailViewController(vc, sender: self)
             }
@@ -64,7 +58,6 @@ extension SearchViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         getEverythingNews(searchKeyword: searchBar.text!)
-        //self.searchTableView.showSkeleton(usingColor: .wetAsphalt, transition: .none)
     }
 }
 

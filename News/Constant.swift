@@ -6,19 +6,17 @@
 //
 
 struct Constant {
-//    static let cellIdentifier = "ReusableCell"
-//    static let cellNibName = "MessageCell"
-//    static let registerSegue = "RegisterToChat"
-//    static let loginSegue = "LoginToChat"
-//    static let appName = "News"
-    
-struct BrandColors {
-//        static let purple = "BrandPurple"
-//        static let lightPurple = "BrandLightPurple"
-//        static let blue = "BrandBlue"
-//        static let lighBlue = "BrandLightBlue"
-//        static let brandPurple = "BrandPurple"
-}
+    static let appName = "News"
+    static let breakingNewsCollectionViewCell = "BreakingNewsCollectionViewCell"
+    static let categoryNewsTableViewCell = "CategoryNewsTableViewCell"
+    static let everythingNewsTableViewCell = "EverythingNewsTableViewCell"
+    static let bookmarkTableViewCell = "BookmarkTableViewCell"
+    static let breakingNewsDetailVC = "showNewsDetail"
+    static let categoryNewsDetailVC = "showCategoryNewsDetail"
+    static let everythingNewsDetailVC = "showEverythingNewsDetail"
+    static let bookmarkNewsDetailVC = "showBookmarkNewsDetail"
+    static let loginNavigationVC = "loginNavigationController"
+    static let mainTabBarVC = "mainTabBarController"
     
 struct FStore {
     static let collectionName = "bookmark"

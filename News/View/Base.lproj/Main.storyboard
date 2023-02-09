@@ -13,7 +13,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="HF8-gu-g5k">
             <objects>
-                <tabBarController storyboardIdentifier="MainTabBarController" id="fYN-g7-XjI" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mainTabBarController" id="fYN-g7-XjI" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="HQU-I5-pjO"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yWt-gf-PnK">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="49"/>
@@ -86,8 +86,8 @@
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <sections/>
                                                 <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="isUserInteractionDisabledWhenSkeletonIsActive" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ga7-sg-LSV"/>
@@ -174,9 +174,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Ou8-IO-01Z">
                                 <rect key="frame" x="0.0" y="260" width="430" height="589"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <outlet property="dataSource" destination="ng6-Xl-KFH" id="a5C-Rd-84q"/>
                                     <outlet property="delegate" destination="ng6-Xl-KFH" id="AdO-pV-fF6"/>
@@ -880,7 +877,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Erb-fJ-cI4">
             <objects>
-                <navigationController storyboardIdentifier="LoginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="HSq-4j-DWh" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="loginNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="HSq-4j-DWh" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ku5-Jg-oUm">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>

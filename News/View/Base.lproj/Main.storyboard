@@ -85,10 +85,6 @@
                                                 <rect key="frame" x="0.0" y="364" width="430" height="426"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <sections/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isUserInteractionDisabledWhenSkeletonIsActive" value="YES"/>
-                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="ga7-sg-LSV"/>
                                                     <outlet property="delegate" destination="BYZ-38-t0r" id="j6G-Wf-Q8R"/>

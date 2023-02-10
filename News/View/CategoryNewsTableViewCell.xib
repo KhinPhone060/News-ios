@@ -18,65 +18,65 @@
                 <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-fY-WrW">
-                        <rect key="frame" x="25" y="6" width="86" height="86"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XX5-qj-7dc">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-2L-9CJ">
+                                <rect key="frame" x="121" y="5.9999999999999982" width="255" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Category news description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-a7-agn">
+                                <rect key="frame" x="121" y="40.333333333333329" width="249" height="49.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGrayColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="random" translatesAutoresizingMaskIntoConstraints="NO" id="Ijc-fY-WrW">
+                                <rect key="frame" x="25" y="6" width="86" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="1SY-CX-lqO"/>
+                                    <constraint firstAttribute="height" constant="86" id="fhu-fz-9bu"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="86" id="1SY-CX-lqO"/>
-                            <constraint firstAttribute="height" constant="86" id="fhu-fz-9bu"/>
+                            <constraint firstItem="eTe-2L-9CJ" firstAttribute="top" secondItem="XX5-qj-7dc" secondAttribute="top" constant="6" id="1zH-Wr-HpS"/>
+                            <constraint firstAttribute="bottom" secondItem="SCK-a7-agn" secondAttribute="bottom" constant="10.33" id="6uo-VL-YYc"/>
+                            <constraint firstItem="Ijc-fY-WrW" firstAttribute="leading" secondItem="XX5-qj-7dc" secondAttribute="leading" constant="25" id="7Jn-Yb-0DX"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ijc-fY-WrW" secondAttribute="bottom" constant="6" id="9e9-Zm-HGt"/>
+                            <constraint firstItem="SCK-a7-agn" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="UFu-a7-kqc"/>
+                            <constraint firstItem="eTe-2L-9CJ" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="gFc-4P-ZtN"/>
+                            <constraint firstItem="SCK-a7-agn" firstAttribute="top" secondItem="eTe-2L-9CJ" secondAttribute="bottom" constant="14" id="n7t-sJ-izG"/>
+                            <constraint firstItem="Ijc-fY-WrW" firstAttribute="top" secondItem="XX5-qj-7dc" secondAttribute="top" constant="6" id="nYU-w8-VV8"/>
+                            <constraint firstAttribute="trailing" secondItem="SCK-a7-agn" secondAttribute="trailing" constant="20" symbolic="YES" id="njz-dm-H74"/>
+                            <constraint firstAttribute="trailing" secondItem="eTe-2L-9CJ" secondAttribute="trailing" constant="14" id="o0h-7e-ryW"/>
                         </constraints>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                        </userDefinedRuntimeAttributes>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category News Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTe-2L-9CJ">
-                        <rect key="frame" x="121" y="5.9999999999999982" width="255" height="20.333333333333329"/>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                        </userDefinedRuntimeAttributes>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Category news description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SCK-a7-agn">
-                        <rect key="frame" x="121" y="34.333333333333343" width="255" height="59.666666666666657"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" systemColor="systemGrayColor"/>
-                        <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                        </userDefinedRuntimeAttributes>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="Ijc-fY-WrW" secondAttribute="bottom" constant="8" id="EFT-Gc-iO3"/>
-                    <constraint firstAttribute="trailing" secondItem="eTe-2L-9CJ" secondAttribute="trailing" constant="14" id="LCD-B3-otp"/>
-                    <constraint firstItem="eTe-2L-9CJ" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="Pk5-3y-XeQ"/>
-                    <constraint firstItem="SCK-a7-agn" firstAttribute="top" secondItem="eTe-2L-9CJ" secondAttribute="bottom" constant="8.0000000000000142" id="eS2-3Y-wh9"/>
-                    <constraint firstItem="SCK-a7-agn" firstAttribute="leading" secondItem="Ijc-fY-WrW" secondAttribute="trailing" constant="10" id="hd2-SU-iAd"/>
-                    <constraint firstAttribute="trailing" secondItem="SCK-a7-agn" secondAttribute="trailing" constant="14" id="lgN-aJ-X3z"/>
-                    <constraint firstItem="eTe-2L-9CJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5.9999999999999982" id="lwD-8o-Yox"/>
-                    <constraint firstAttribute="bottom" secondItem="SCK-a7-agn" secondAttribute="bottom" constant="6" id="o4X-f6-5Xg"/>
-                    <constraint firstItem="Ijc-fY-WrW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="qSh-Be-Ifu"/>
-                    <constraint firstItem="Ijc-fY-WrW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="usN-vE-Ckb"/>
+                    <constraint firstItem="XX5-qj-7dc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="09g-bn-Ajs"/>
+                    <constraint firstAttribute="trailing" secondItem="XX5-qj-7dc" secondAttribute="trailing" id="Dng-bn-IKp"/>
+                    <constraint firstItem="XX5-qj-7dc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="SBc-Rn-0Vc"/>
+                    <constraint firstAttribute="bottom" secondItem="XX5-qj-7dc" secondAttribute="bottom" id="uzW-Gp-17c"/>
                 </constraints>
-                <userDefinedRuntimeAttributes>
-                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <userDefinedRuntimeAttributes>
-                <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-            </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="categoryNewsDescription" destination="SCK-a7-agn" id="Pdr-Ti-I4a"/>
                 <outlet property="categoryNewsImage" destination="Ijc-fY-WrW" id="3mb-Ck-cKY"/>
                 <outlet property="categoryNewsTitle" destination="eTe-2L-9CJ" id="XCW-io-XTI"/>
             </connections>
-            <point key="canvasLocation" x="151" y="21"/>
+            <point key="canvasLocation" x="150.76923076923077" y="20.616113744075829"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="random" width="262.33334350585938" height="148"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

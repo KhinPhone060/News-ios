@@ -22,16 +22,27 @@ An iOS application that allows users to read and catch up on daily news and top 
 $ git clone https://github.com/KhinPhone060/News-ios.git
 $ cd News-ios
 ```
-2. Pod
+2. In Podfile
+```bash
+  pod 'Alamofire'
+	pod 'Kingfisher'
+	pod 'ObjectMapper'
+	pod 'ReadabilityKit'
+	pod 'FirebaseAuth'
+	pod 'FirebaseFirestore'
+	pod 'Toast', '~> 4.0.0'
+	pod 'SkeletonView'
+```
+3. Pod
 ```bash
 pod install
 ```
 
-3. Open the project in XCode
+4. Open the project in XCode
 ```bash
 $ open News-ios.xcodeproj
 ```
-4. Compile and run in your XCode simulator
+5. Compile and run in your XCode simulator
 
 ## Reflection
 This was a one week long project I built as project based learning. My goal is to familiarize myself with iOS development and networking in iOS using APIs, Firebase, UIKit, and CocoaPods. 

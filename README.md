@@ -24,14 +24,14 @@ $ cd News-ios
 ```
 2. In Podfile
 ```bash
-  pod 'Alamofire'
-	pod 'Kingfisher'
-	pod 'ObjectMapper'
-	pod 'ReadabilityKit'
-	pod 'FirebaseAuth'
-	pod 'FirebaseFirestore'
-	pod 'Toast', '~> 4.0.0'
-	pod 'SkeletonView'
+pod 'Alamofire'
+pod 'Kingfisher'
+pod 'ObjectMapper'
+pod 'ReadabilityKit'
+pod 'FirebaseAuth'
+pod 'FirebaseFirestore'
+pod 'Toast', '~> 4.0.0'
+pod 'SkeletonView'
 ```
 3. Pod
 ```bash
